@@ -1,20 +1,20 @@
 //
-//  WebView.swift
-//  実習
+//  count.swift
+//  gounipa1
 //
-//  Created by 大木一輝 on 2016/05/13.
-//  Copyright © 2016年 mycompany. All rights reserved.
-//
+//  Created by 渡辺寛太 on 2016/05/13.
+//  Copyright © 2016年 渡辺寛太. All rights reserved.
+//  UNIPAを表示
 
 import Foundation
 import UIKit
 
 class WebView: UIViewController {
-    
     @IBOutlet weak var webview: UIWebView!
-    
+
     var url:String = "https://www.google.co.jp"
     
+
     @IBAction func unipa(sender: AnyObject) {
         // 入力されたURLを取得
         url = "https://portal.sa.dendai.ac.jp/up/faces/login/Com00505A.jsp"
@@ -23,6 +23,7 @@ class WebView: UIViewController {
         loadURL()
     }
     
+    
     @IBAction func google(sender: AnyObject) {
         // 入力されたURLを取得
         url = "https://www.google.co.jp"
@@ -30,15 +31,15 @@ class WebView: UIViewController {
         // loadURL関数を実行
         loadURL()
     }
+
     
     @IBAction func mail(sender: AnyObject) {
-        //入力されたURLを取得
         url = "http://mail.ms.dendai.ac.jp/cgi-bin/index.cgi"
         
-        // loadURL関数を実行
         loadURL()
     }
     
+
     
     // loadURL関数を定義
     func loadURL() {
@@ -47,7 +48,6 @@ class WebView: UIViewController {
         webview.loadRequest(request)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
