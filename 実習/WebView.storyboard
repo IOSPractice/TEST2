@@ -1,71 +1,146 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--ユニパ-->
-        <scene sceneID="JzF-in-YOk">
+        <!--Web View-->
+        <scene sceneID="tmy-t1-gdw">
             <objects>
-                <viewController storyboardIdentifier="WebView" title="ユニパ" id="NhF-cQ-mlT" customClass="WebView" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebView" id="waS-4r-Zye" customClass="WebView" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lCJ-d0-rMM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Aeg-uA-5fS"/>
+                        <viewControllerLayoutGuide type="top" id="uJE-gE-374"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mex-R1-TUq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KXT-jZ-uJ9">
+                    <view key="view" contentMode="scaleToFill" id="gXT-sC-Oi7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-d8-4Ia">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDH-2v-cBO">
+                                <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmT-zF-9Ho">
+                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="feK-aM-lPr"/>
-                                    <barButtonItem style="plain" id="26y-XF-erf">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LWN-ii-Ctr">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QNC-Lm-adA"/>
+                                    <barButtonItem style="plain" id="lDk-JV-yJc">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="evW-7V-ONj">
                                             <rect key="frame" x="118" y="7" width="45" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="UNIPA"/>
+                                            <connections>
+                                                <action selector="unipa:" destination="waS-4r-Zye" eventType="touchDown" id="eWJ-5j-AwS"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="unipa:" destination="NhF-cQ-mlT" id="74v-qd-TNI"/>
-                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LU0-S4-Eu2"/>
-                                    <barButtonItem style="plain" id="KdK-Po-teG">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dCj-ec-7Td">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hpA-bv-iWW"/>
+                                    <barButtonItem style="plain" id="Pcd-kp-sCb">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vxI-ep-5Nt">
                                             <rect key="frame" x="270" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="検索"/>
+                                            <connections>
+                                                <action selector="google:" destination="waS-4r-Zye" eventType="touchDown" id="CLX-ab-8Uz"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="google:" destination="NhF-cQ-mlT" id="w8R-bd-Gwg"/>
-                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g1y-lE-FbI"/>
-                                    <barButtonItem style="plain" id="n1E-EL-1VB">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ehd-Sn-w2B">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ujz-Ml-Cqb"/>
+                                    <barButtonItem style="plain" id="1jD-hy-Ta5">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YdB-P6-JeM">
                                             <rect key="frame" x="408" y="7" width="75" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="電大メール"/>
+                                            <connections>
+                                                <action selector="mail:" destination="waS-4r-Zye" eventType="touchDown" id="28q-3b-Usq"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="mail:" destination="NhF-cQ-mlT" id="FkY-1a-GFo"/>
-                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UDL-2A-4et"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jvG-o4-lW7"/>
                                 </items>
                             </toolbar>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="663-YI-IeF">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVA-W1-43I">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bw7-6A-fTL"/>
+                                    <barButtonItem style="plain" id="Dya-dR-Cg9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dYR-nR-zyK">
+                                            <rect key="frame" x="102" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="◀︎">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goBack" destination="SDH-2v-cBO" eventType="touchDown" id="ywJ-8C-bo8"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XTI-nc-1PR"/>
+                                    <barButtonItem style="plain" id="jwO-Yg-Alv">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vgy-GS-zHW">
+                                            <rect key="frame" x="224" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="▶︎">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goForward" destination="SDH-2v-cBO" eventType="touchDown" id="W59-oC-pIM"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nyq-N8-h0V"/>
+                                    <barButtonItem style="plain" id="uCw-q7-kFd">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dkq-vg-Wol">
+                                            <rect key="frame" x="346" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="🔃"/>
+                                            <connections>
+                                                <action selector="reload" destination="SDH-2v-cBO" eventType="touchDown" id="tHi-BJ-Kdg"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Win-sG-xHT"/>
+                                    <barButtonItem style="plain" id="Sc0-p5-t43">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lfy-Yt-dkU">
+                                            <rect key="frame" x="468" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="✖️"/>
+                                            <connections>
+                                                <action selector="stopLoading" destination="SDH-2v-cBO" eventType="touchDown" id="hxl-4r-4TX"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ICH-j4-rfW"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SDH-2v-cBO" firstAttribute="leading" secondItem="gXT-sC-Oi7" secondAttribute="leadingMargin" constant="-20" id="1gH-sy-u59"/>
+                            <constraint firstItem="SmT-zF-9Ho" firstAttribute="top" secondItem="uJE-gE-374" secondAttribute="bottom" id="3ye-Rh-UEa"/>
+                            <constraint firstItem="Mex-R1-TUq" firstAttribute="top" secondItem="SDH-2v-cBO" secondAttribute="bottom" id="7WL-T8-xhY"/>
+                            <constraint firstItem="SDH-2v-cBO" firstAttribute="top" secondItem="SmT-zF-9Ho" secondAttribute="bottom" constant="20" id="A3Y-AS-S8Z"/>
+                            <constraint firstItem="SDH-2v-cBO" firstAttribute="leading" secondItem="gXT-sC-Oi7" secondAttribute="leadingMargin" id="DSb-NN-6Wf"/>
+                            <constraint firstItem="SDH-2v-cBO" firstAttribute="top" secondItem="SmT-zF-9Ho" secondAttribute="bottom" id="FCF-3r-yWp"/>
+                            <constraint firstItem="Mex-R1-TUq" firstAttribute="top" secondItem="TVA-W1-43I" secondAttribute="bottom" id="Go5-hQ-JuF"/>
+                            <constraint firstItem="Mex-R1-TUq" firstAttribute="top" secondItem="SDH-2v-cBO" secondAttribute="bottom" id="PZy-Rx-fvH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVA-W1-43I" secondAttribute="trailing" constant="-20" id="TsL-JO-Fby"/>
+                            <constraint firstItem="TVA-W1-43I" firstAttribute="leading" secondItem="gXT-sC-Oi7" secondAttribute="leadingMargin" constant="-20" id="ckY-1m-fCc"/>
+                            <constraint firstItem="SmT-zF-9Ho" firstAttribute="leading" secondItem="gXT-sC-Oi7" secondAttribute="leadingMargin" constant="-20" id="coi-am-pHs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SmT-zF-9Ho" secondAttribute="trailing" constant="-20" id="iuh-5E-MRX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SDH-2v-cBO" secondAttribute="trailing" constant="-20" id="jNq-0L-rdO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SDH-2v-cBO" secondAttribute="trailing" constant="-20" id="uZe-7h-opZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webview" destination="SDH-2v-cBO" id="VYx-ej-m5u"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ooO-kM-HZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44X-qo-szu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="364"/>
+            <point key="canvasLocation" x="233" y="347"/>
         </scene>
     </scenes>
 </document>

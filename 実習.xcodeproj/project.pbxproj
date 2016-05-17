@@ -18,8 +18,8 @@
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
 		AE8DA6F51CE5A7D2004D2EC8 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F41CE5A7D2004D2EC8 /* Map.swift */; };
 		AE8DA6F91CE5A7E6004D2EC8 /* TaskManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */; };
-		CAE5F2071CEB130300EC72A7 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE5F2061CEB130300EC72A7 /* WebView.storyboard */; };
-		CAE5F2091CEB137700EC72A7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5F2081CEB137700EC72A7 /* WebView.swift */; };
+		CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95BA321CEB7A5A006E791D /* WebView.swift */; };
+		CA95BA351CEB7A7B006E791D /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA95BA341CEB7A7B006E791D /* WebView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		AE8DA6F41CE5A7D2004D2EC8 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagement.swift; sourceTree = "<group>"; };
-		CAE5F2061CEB130300EC72A7 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WebView.storyboard; path = ../../../Program/ios/gounipa1/gounipa1/WebView.storyboard; sourceTree = "<group>"; };
-		CAE5F2081CEB137700EC72A7 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebView.swift; path = ../../../Program/ios/gounipa1/gounipa1/WebView.swift; sourceTree = "<group>"; };
+		CA95BA321CEB7A5A006E791D /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CA95BA341CEB7A7B006E791D /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,16 +74,16 @@
 				AE5A63961CE58373003C5990 /* Main.swift */,
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
 				AE8DA6F41CE5A7D2004D2EC8 /* Map.swift */,
-				CAE5F2081CEB137700EC72A7 /* WebView.swift */,
 				AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
 				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AE8DA6EC1CE5A724004D2EC8 /* Map.storyboard */,
-				CAE5F2061CEB130300EC72A7 /* WebView.storyboard */,
 				AE8DA6F01CE5A75D004D2EC8 /* TaskManagement.storyboard */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
 				AE5A63A01CE58373003C5990 /* Info.plist */,
+				CA95BA321CEB7A5A006E791D /* WebView.swift */,
+				CA95BA341CEB7A7B006E791D /* WebView.storyboard */,
 			);
 			path = "実習";
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 			files = (
 				AE5A639F1CE58373003C5990 /* LaunchScreen.storyboard in Resources */,
 				AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */,
-				CAE5F2071CEB130300EC72A7 /* WebView.storyboard in Resources */,
 				AE8DA6ED1CE5A724004D2EC8 /* Map.storyboard in Resources */,
+				CA95BA351CEB7A7B006E791D /* WebView.storyboard in Resources */,
 				AE5A639C1CE58373003C5990 /* Assets.xcassets in Resources */,
 				AE5A639A1CE58373003C5990 /* Main.storyboard in Resources */,
 				AE8DA6F11CE5A75D004D2EC8 /* TaskManagement.storyboard in Resources */,
@@ -165,9 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5A63971CE58373003C5990 /* Main.swift in Sources */,
-				CAE5F2091CEB137700EC72A7 /* WebView.swift in Sources */,
 				AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */,
 				AE8DA6F51CE5A7D2004D2EC8 /* Map.swift in Sources */,
+				CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */,
 				AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */,
 				AE8DA6F91CE5A7E6004D2EC8 /* TaskManagement.swift in Sources */,
 			);
