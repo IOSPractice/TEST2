@@ -5,7 +5,7 @@
 //  Created by 渡辺寛太 on 2016/05/18.
 //  Copyright © 2016年 mycompany. All rights reserved.
 //
-//テスト１
+//　UNIPAの表示
 
 import Foundation
 import UIKit
