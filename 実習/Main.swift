@@ -15,6 +15,6 @@ class Main: UIViewController {
     @IBOutlet weak var taskManagementBtn: UIButton!
     
     override func viewDidLoad() {
-        
+        print("commit")
     }
 }
