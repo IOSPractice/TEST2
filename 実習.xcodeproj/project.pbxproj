@@ -15,9 +15,7 @@
 		AE5A639C1CE58373003C5990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5A639B1CE58373003C5990 /* Assets.xcassets */; };
 		AE5A639F1CE58373003C5990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */; };
 		AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */; };
-		AE8DA6F11CE5A75D004D2EC8 /* TaskManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8DA6F01CE5A75D004D2EC8 /* TaskManagement.storyboard */; };
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
-		AE8DA6F91CE5A7E6004D2EC8 /* TaskManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */; };
 		BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */; };
 		BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */; };
 		BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */; };
@@ -47,9 +45,7 @@
 		AE5A639E1CE58373003C5990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE5A63A01CE58373003C5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
-		AE8DA6F01CE5A75D004D2EC8 /* TaskManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskManagement.storyboard; sourceTree = "<group>"; };
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
-		AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagement.swift; sourceTree = "<group>"; };
 		BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP00.png; sourceTree = "<group>"; };
 		BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP01.png; sourceTree = "<group>"; };
 		BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP02.png; sourceTree = "<group>"; };
@@ -117,6 +113,8 @@
 				CA95BA341CEB7A7B006E791D /* WebView.storyboard */,
 				BEDFBE171CF2BDF50060B3FA /* Map.storyboard */,
 				BEDFBE191CF2BE170060B3FA /* Map.swift */,
+				067A05A11CF2E562008411CE /* Task.swift */,
+				067A05A31CF2E582008411CE /* Task.storyboard */,
 			);
 			path = "実習";
 			sourceTree = "<group>";
@@ -209,13 +207,13 @@
 				BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */,
 				BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */,
 				BEDFBD921CF0E81B0060B3FA /* TDUMAP03.png in Resources */,
+				067A05A41CF2E582008411CE /* Task.storyboard in Resources */,
 				BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */,
 				BEDFBD951CF0E81B0060B3FA /* TDUMAP09.png in Resources */,
 				AE5A639C1CE58373003C5990 /* Assets.xcassets in Resources */,
 				BEDFBD971CF0E81B0060B3FA /* TDUMAP11.png in Resources */,
 				AE5A639A1CE58373003C5990 /* Main.storyboard in Resources */,
 				BEDFBD941CF0E81B0060B3FA /* TDUMAP08.png in Resources */,
-				AE8DA6F11CE5A75D004D2EC8 /* TaskManagement.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
