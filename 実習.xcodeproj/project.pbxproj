@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE15C4E21CF53DF60086CD3E /* MyLabel.swift */; };
+		AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */; };
 		AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A63941CE58373003C5990 /* AppDelegate.swift */; };
 		AE5A63971CE58373003C5990 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A63961CE58373003C5990 /* Main.swift */; };
 		AE5A639A1CE58373003C5990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63981CE58373003C5990 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE15C4E21CF53DF60086CD3E /* MyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
+		AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE5A63911CE58373003C5990 /* 実習.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "実習.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5A63941CE58373003C5990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5A63961CE58373003C5990 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -99,10 +103,12 @@
 				BEDFBD701CF0E6910060B3FA /* TDUMAP */,
 				AE5A63941CE58373003C5990 /* AppDelegate.swift */,
 				AE5A63961CE58373003C5990 /* Main.swift */,
+				AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */,
+				AE15C4E21CF53DF60086CD3E /* MyLabel.swift */,
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
+				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
-				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AE8DA6F01CE5A75D004D2EC8 /* TaskManagement.storyboard */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
@@ -221,10 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5A63971CE58373003C5990 /* Main.swift in Sources */,
+				AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */,
 				AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */,
 				CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */,
 				AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */,
 				BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */,
+				AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */,
 				AE8DA6F91CE5A7E6004D2EC8 /* TaskManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
