@@ -30,6 +30,8 @@
 		BEDFBE161CF29F1E0060B3FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */; };
 		BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBE171CF2BDF50060B3FA /* Map.storyboard */; };
 		BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFBE191CF2BE170060B3FA /* Map.swift */; };
+		CA10FD761CFBC01E00F6C026 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA10FD751CFBC01E00F6C026 /* Task.storyboard */; };
+		CA10FD781CFBC02F00F6C026 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10FD771CFBC02F00F6C026 /* Task.swift */; };
 		CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95BA321CEB7A5A006E791D /* WebView.swift */; };
 		CA95BA351CEB7A7B006E791D /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA95BA341CEB7A7B006E791D /* WebView.storyboard */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BEDFBE171CF2BDF50060B3FA /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		BEDFBE191CF2BE170060B3FA /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		CA10FD751CFBC01E00F6C026 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
+		CA10FD771CFBC02F00F6C026 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CA95BA321CEB7A5A006E791D /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CA95BA341CEB7A7B006E791D /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,9 +107,7 @@
 				AE15C4E21CF53DF60086CD3E /* MyLabel.swift */,
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
 				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
-				AE8DA6F81CE5A7E6004D2EC8 /* TaskManagement.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
-				AE8DA6F01CE5A75D004D2EC8 /* TaskManagement.storyboard */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
 				AE5A63A01CE58373003C5990 /* Info.plist */,
@@ -113,8 +115,8 @@
 				CA95BA341CEB7A7B006E791D /* WebView.storyboard */,
 				BEDFBE171CF2BDF50060B3FA /* Map.storyboard */,
 				BEDFBE191CF2BE170060B3FA /* Map.swift */,
-				067A05A11CF2E562008411CE /* Task.swift */,
-				067A05A31CF2E582008411CE /* Task.storyboard */,
+				CA10FD751CFBC01E00F6C026 /* Task.storyboard */,
+				CA10FD771CFBC02F00F6C026 /* Task.swift */,
 			);
 			path = "実習";
 			sourceTree = "<group>";
@@ -207,9 +209,9 @@
 				BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */,
 				BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */,
 				BEDFBD921CF0E81B0060B3FA /* TDUMAP03.png in Resources */,
-				067A05A41CF2E582008411CE /* Task.storyboard in Resources */,
 				BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */,
 				BEDFBD951CF0E81B0060B3FA /* TDUMAP09.png in Resources */,
+				CA10FD761CFBC01E00F6C026 /* Task.storyboard in Resources */,
 				AE5A639C1CE58373003C5990 /* Assets.xcassets in Resources */,
 				BEDFBD971CF0E81B0060B3FA /* TDUMAP11.png in Resources */,
 				AE5A639A1CE58373003C5990 /* Main.storyboard in Resources */,
@@ -229,9 +231,9 @@
 				AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */,
 				CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */,
 				AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */,
+				CA10FD781CFBC02F00F6C026 /* Task.swift in Sources */,
 				BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */,
 				AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */,
-				AE8DA6F91CE5A7E6004D2EC8 /* TaskManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
