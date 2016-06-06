@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -136,9 +136,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-UP-7CH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qJx-Rt-FCy">
+                                                    <rect key="frame" x="0.0" y="30" width="50" height="20"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="lCg-6a-VOb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-UP-7CH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -147,12 +156,17 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="xtB-UP-7CH" firstAttribute="leading" secondItem="Yec-JH-hnl" secondAttribute="leadingMargin" constant="-8" id="1Ys-EZ-oY2"/>
+                                            <constraint firstItem="qJx-Rt-FCy" firstAttribute="top" secondItem="xtB-UP-7CH" secondAttribute="bottom" id="3Lz-K9-dEX"/>
+                                            <constraint firstItem="qJx-Rt-FCy" firstAttribute="leading" secondItem="Yec-JH-hnl" secondAttribute="leadingMargin" constant="-8" id="4lR-QP-Rmz"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="xtB-UP-7CH" secondAttribute="trailing" constant="-8" id="4xO-PY-Jp7"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qJx-Rt-FCy" secondAttribute="trailing" constant="-8" id="FQs-MQ-hYJ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="qJx-Rt-FCy" secondAttribute="bottom" constant="-8" id="Fji-Yi-KfL"/>
                                             <constraint firstItem="xtB-UP-7CH" firstAttribute="top" secondItem="Yec-JH-hnl" secondAttribute="topMargin" constant="-8" id="O8I-ht-fb0"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="xtB-UP-7CH" secondAttribute="bottom" constant="-8" id="hWC-aw-0a2"/>
+                                            <constraint firstItem="qJx-Rt-FCy" firstAttribute="top" secondItem="xtB-UP-7CH" secondAttribute="bottom" id="a18-Tj-TR1"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="textView" destination="xtB-UP-7CH" id="6ZE-GR-Uhy"/>
+                                            <outlet property="className" destination="xtB-UP-7CH" id="Rey-mb-JEu"/>
+                                            <outlet property="classNum" destination="qJx-Rt-FCy" id="69q-xS-hwU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
