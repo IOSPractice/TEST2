@@ -14,12 +14,9 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
     var cells: [MyCollectionViewCell] = []//cellの外部取得用
     var cellText: [String] = []
     var isEditingCell: Bool = false
-    var toolbarHeight: CGFloat!//ナビゲーションバーの高さ
-    
     
     override func viewDidLoad() {
         //ナビゲーションバーの高さを取得
-        toolbarHeight = self.navigationController?.toolbar.frame.height
         
         //コレクションのデータソース、デリゲートの設定
         collectionView.dataSource = self
@@ -46,7 +43,7 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
                 cell.className.editable = false
                 cell.classNum.editable = false
                 cell.className.backgroundColor = UIColor.whiteColor()
-                cell.classNum.backgroundColor = UIColor.grayColor()
+                cell.classNum.backgroundColor = UIColor.lightGrayColor()
             }
             isEditingCell = false
             collectionView.reloadData()
