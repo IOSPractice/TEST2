@@ -31,22 +31,22 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         if !isEditingCell {
             for cell in cells {
-                cell.className.editable = true
-                cell.classNum.editable = true
+                //cell.className.editable = true
+                //cell.classNum.editable = true
                 cell.className.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
                 cell.classNum.backgroundColor = UIColor.whiteColor()
             }
             isEditingCell = true
-            collectionView.reloadData()
+            //collectionView.reloadData()
         } else {
             for cell in cells {
-                cell.className.editable = false
-                cell.classNum.editable = false
+                //cell.className.editable = false
+                //cell.classNum.editable = false
                 cell.className.backgroundColor = UIColor.whiteColor()
                 cell.classNum.backgroundColor = UIColor.lightGrayColor()
             }
             isEditingCell = false
-            collectionView.reloadData()
+            //collectionView.reloadData()
         }
     }
 
@@ -67,6 +67,11 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         cells.append(cell)
         
         return cell
+    }
+    
+    //セルの選択時のアクション
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("\(indexPath.row)")
     }
     
     //セルのサイズ指定
