@@ -11,41 +11,40 @@ import UIKit
 class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var cells: [MyCollectionViewCell] = []//cellの外部取得用
     var cellText: [String] = []
-    var isEditingCell: Bool = false
+    var isMovable: Bool = false//セルタップ時に画面遷移可能かどうか
+    var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
-        //ナビゲーションバーの高さを取得
-        
         //コレクションのデータソース、デリゲートの設定
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let saveBtn = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: #selector(TimeTable.saveBtnAction(_:)))
-        self.navigationItem.rightBarButtonItems = [saveBtn]
+        editButton = UIBarButtonItem(title: "編集", style: .Plain, target: self, action: #selector(TimeTable.editBtnAction(_:)))
+        self.navigationItem.rightBarButtonItems = [editButton]
     }
     
-    //saveボタンのアクション
-    func saveBtnAction(sender: AnyObject) {
+    //編集ボタンのアクション
+    func editBtnAction(sender: AnyObject) {
         
-        if !isEditingCell {
+        if !isMovable {
             for cell in cells {
-                //cell.className.editable = true
-                //cell.classNum.editable = true
                 cell.className.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
                 cell.classNum.backgroundColor = UIColor.whiteColor()
+                editButton.title = "完了"
+                
             }
-            isEditingCell = true
+            isMovable = true
             //collectionView.reloadData()
         } else {
             for cell in cells {
-                //cell.className.editable = false
-                //cell.classNum.editable = false
                 cell.className.backgroundColor = UIColor.whiteColor()
                 cell.classNum.backgroundColor = UIColor.lightGrayColor()
+                editButton.title = "編集"
             }
-            isEditingCell = false
+            isMovable = false
             //collectionView.reloadData()
         }
     }
@@ -69,9 +68,16 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
+    
     //セルの選択時のアクション
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("\(indexPath.row)")
+        if isMovable {
+            let timeTableEditController = self.storyboard?.instantiateViewControllerWithIdentifier("TimeTableEditController") as! TimeTableEditController
+            timeTableEditController.classIndex = indexPath.row
+            self.navigationController?.pushViewController(timeTableEditController, animated: true)
+        }
+        
     }
     
     //セルのサイズ指定

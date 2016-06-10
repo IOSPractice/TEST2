@@ -167,7 +167,6 @@
                                         <connections>
                                             <outlet property="className" destination="xtB-UP-7CH" id="Rey-mb-JEu"/>
                                             <outlet property="classNum" destination="qJx-Rt-FCy" id="69q-xS-hwU"/>
-                                            <segue destination="B0S-uY-oeC" kind="show" id="Zdx-nX-vsj"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -195,7 +194,7 @@
         <!--Time Table Edit Controller-->
         <scene sceneID="Lc9-zs-ehi">
             <objects>
-                <viewController id="B0S-uY-oeC" customClass="TimeTableEditController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="TimeTableEditController" storyboardIdentifier="TimeTableEditController" id="B0S-uY-oeC" customClass="TimeTableEditController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w3L-tv-ynN"/>
                         <viewControllerLayoutGuide type="bottom" id="znS-E6-4IJ"/>
@@ -242,6 +241,18 @@
                                     <constraint firstAttribute="width" constant="400" id="FH8-Kt-2Ig"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-h9-ykH">
+                                <rect key="frame" x="271" y="291" width="59" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.77453201875649558" blue="0.70100125207499275" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <color key="tintColor" red="0.63600467416378215" green="0.52448383698788237" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="追加">
+                                    <color key="titleColor" red="0.16041431757314306" green="0.60253277315847553" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="B0S-uY-oeC" eventType="touchUpInside" id="vOg-ZG-xxW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -256,6 +267,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="className" destination="lcG-Tp-vgY" id="AzM-Aw-WG6"/>
                         <outlet property="classNum" destination="we6-jK-w0P" id="qpu-Mf-eNa"/>
                     </connections>
                 </viewController>
