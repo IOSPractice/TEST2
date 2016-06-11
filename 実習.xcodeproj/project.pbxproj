@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE001BB61D0BEF2200F14478 /* ClassObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE001BB51D0BEF2200F14478 /* ClassObject.swift */; };
 		AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE15C4E21CF53DF60086CD3E /* MyLabel.swift */; };
 		AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */; };
 		AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A63941CE58373003C5990 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		0F7AF6C229AAEBCCDA41BC2C /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E01A23AA3027F03423DCAD7 /* Pods-実習.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-実習.release.xcconfig"; path = "Pods/Target Support Files/Pods-実習/Pods-実習.release.xcconfig"; sourceTree = "<group>"; };
 		5D70C15EDACC981B2EC4B820 /* Pods-実習.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-実習.debug.xcconfig"; path = "Pods/Target Support Files/Pods-実習/Pods-実習.debug.xcconfig"; sourceTree = "<group>"; };
+		AE001BB51D0BEF2200F14478 /* ClassObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassObject.swift; sourceTree = "<group>"; };
 		AE15C4E21CF53DF60086CD3E /* MyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
 		AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE5A63911CE58373003C5990 /* 実習.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "実習.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
 				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AEC584391D09C54F00881360 /* TimeTableEditController.swift */,
+				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5A63971CE58373003C5990 /* Main.swift in Sources */,
+				AE001BB61D0BEF2200F14478 /* ClassObject.swift in Sources */,
 				AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */,
 				AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */,
 				CA95BA331CEB7A5A006E791D /* WebView.swift in Sources */,

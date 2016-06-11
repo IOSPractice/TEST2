@@ -237,32 +237,30 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="F6r-5I-uXP"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFA-FN-omT">
-                                <rect key="frame" x="257" y="389" width="87" height="43"/>
-                                <color key="backgroundColor" red="1" green="0.72078869755450348" blue="0.57707784914620475" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIu-rB-Hok">
+                                <rect key="frame" x="268" y="384" width="65" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.61826120397377571" blue="0.46209563193992909" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5o5-Bw-rgT"/>
+                                    <constraint firstAttribute="width" constant="65" id="KOp-SV-JEa"/>
+                                </constraints>
                                 <state key="normal" title="追加"/>
                                 <connections>
-                                    <action selector="addButton:" destination="B0S-uY-oeC" eventType="touchUpInside" id="6yJ-3b-c8R"/>
+                                    <action selector="addButton:" destination="B0S-uY-oeC" eventType="touchUpInside" id="x06-uv-vNz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wnB-Un-cdO" secondAttribute="trailing" constant="50" id="0LD-yn-5dx"/>
+                            <constraint firstItem="wnB-Un-cdO" firstAttribute="centerX" secondItem="WIu-rB-Hok" secondAttribute="centerX" id="1Tv-O6-oJC"/>
+                            <constraint firstItem="znS-E6-4IJ" firstAttribute="top" secondItem="WIu-rB-Hok" secondAttribute="bottom" constant="173" id="3lg-6M-rN1"/>
                             <constraint firstItem="xmE-U3-tMV" firstAttribute="top" secondItem="w3L-tv-ynN" secondAttribute="bottom" constant="144" id="6Zv-CS-mqq"/>
-                            <constraint firstItem="znS-E6-4IJ" firstAttribute="top" secondItem="KFA-FN-omT" secondAttribute="bottom" constant="168" id="7w7-Qf-Mg6"/>
-                            <constraint firstItem="KFA-FN-omT" firstAttribute="leading" secondItem="cF3-mz-XHh" secondAttribute="leadingMargin" constant="237" id="Dq1-kZ-eIj"/>
                             <constraint firstItem="xmE-U3-tMV" firstAttribute="leading" secondItem="cF3-mz-XHh" secondAttribute="leadingMargin" constant="50" id="FJ4-49-stt"/>
-                            <constraint firstItem="wnB-Un-cdO" firstAttribute="top" secondItem="xmE-U3-tMV" secondAttribute="bottom" constant="53" id="PU4-V0-agJ"/>
-                            <constraint firstItem="KFA-FN-omT" firstAttribute="top" secondItem="wnB-Un-cdO" secondAttribute="bottom" constant="112" id="Tnz-9d-wQb"/>
-                            <constraint firstItem="KFA-FN-omT" firstAttribute="top" secondItem="wnB-Un-cdO" secondAttribute="bottom" constant="112" id="eKK-Rn-Sdw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KFA-FN-omT" secondAttribute="trailing" constant="236" id="f3M-S9-hIE"/>
+                            <constraint firstItem="wnB-Un-cdO" firstAttribute="leading" secondItem="xmE-U3-tMV" secondAttribute="leading" id="bZL-J2-J0y"/>
+                            <constraint firstItem="wnB-Un-cdO" firstAttribute="trailing" secondItem="xmE-U3-tMV" secondAttribute="trailing" id="eYK-aI-5VU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xmE-U3-tMV" secondAttribute="trailing" constant="50" id="gHp-sg-Ruv"/>
-                            <constraint firstItem="wnB-Un-cdO" firstAttribute="leading" secondItem="cF3-mz-XHh" secondAttribute="leadingMargin" constant="50" id="jPp-se-rQy"/>
+                            <constraint firstItem="wnB-Un-cdO" firstAttribute="top" secondItem="xmE-U3-tMV" secondAttribute="bottom" constant="53" id="wa2-ok-2EZ"/>
                         </constraints>
                     </view>
                     <connections>
