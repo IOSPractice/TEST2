@@ -136,7 +136,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qJx-Rt-FCy">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qJx-Rt-FCy">
                                                     <rect key="frame" x="0.0" y="30" width="50" height="20"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -257,9 +257,17 @@
                                     <constraint firstAttribute="width" constant="267" id="fcB-bG-hl5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-Yp-WhI">
+                                <rect key="frame" x="268" y="480" width="65" height="43"/>
+                                <color key="backgroundColor" red="0.50907758600850406" green="1" blue="0.82778703455576952" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="削除"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="B0S-uY-oeC" eventType="touchUpInside" id="Bqz-3Q-8RS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -267,11 +275,15 @@
                             <constraint firstItem="NcR-Fh-WMF" firstAttribute="top" secondItem="w3L-tv-ynN" secondAttribute="bottom" constant="18" id="3DM-Ay-jBC"/>
                             <constraint firstItem="znS-E6-4IJ" firstAttribute="top" secondItem="WIu-rB-Hok" secondAttribute="bottom" constant="173" id="3lg-6M-rN1"/>
                             <constraint firstItem="xmE-U3-tMV" firstAttribute="top" secondItem="w3L-tv-ynN" secondAttribute="bottom" constant="144" id="6Zv-CS-mqq"/>
+                            <constraint firstItem="FXu-Yp-WhI" firstAttribute="top" secondItem="WIu-rB-Hok" secondAttribute="bottom" constant="53" id="F6U-gG-TFC"/>
                             <constraint firstItem="xmE-U3-tMV" firstAttribute="leading" secondItem="cF3-mz-XHh" secondAttribute="leadingMargin" constant="50" id="FJ4-49-stt"/>
                             <constraint firstItem="xmE-U3-tMV" firstAttribute="top" secondItem="NcR-Fh-WMF" secondAttribute="bottom" constant="69" id="FVw-7p-G9k"/>
+                            <constraint firstItem="FXu-Yp-WhI" firstAttribute="trailing" secondItem="WIu-rB-Hok" secondAttribute="trailing" id="I2d-Fs-bfP"/>
                             <constraint firstItem="NcR-Fh-WMF" firstAttribute="centerX" secondItem="xmE-U3-tMV" secondAttribute="centerX" id="Yug-Ch-qAv"/>
+                            <constraint firstItem="FXu-Yp-WhI" firstAttribute="leading" secondItem="WIu-rB-Hok" secondAttribute="leading" id="bA8-iD-vyV"/>
                             <constraint firstItem="wnB-Un-cdO" firstAttribute="leading" secondItem="xmE-U3-tMV" secondAttribute="leading" id="bZL-J2-J0y"/>
                             <constraint firstItem="wnB-Un-cdO" firstAttribute="trailing" secondItem="xmE-U3-tMV" secondAttribute="trailing" id="eYK-aI-5VU"/>
+                            <constraint firstItem="znS-E6-4IJ" firstAttribute="top" secondItem="FXu-Yp-WhI" secondAttribute="bottom" constant="77" id="efz-RM-A8A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xmE-U3-tMV" secondAttribute="trailing" constant="50" id="gHp-sg-Ruv"/>
                             <constraint firstItem="wnB-Un-cdO" firstAttribute="top" secondItem="xmE-U3-tMV" secondAttribute="bottom" constant="53" id="wa2-ok-2EZ"/>
                         </constraints>

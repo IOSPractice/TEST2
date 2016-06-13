@@ -88,6 +88,9 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         cell.classNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
         cells.append(cell)
         
+        print("class numbr pos is\(cell.classNum.layer.position)")
+        print("class name pos is \(cell.className.layer.position)")
+        
         return cell
     }
     

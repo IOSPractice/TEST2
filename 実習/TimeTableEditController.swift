@@ -9,15 +9,6 @@
 import UIKit
 import RealmSwift
 
-enum Weekday: Int {
-    case Monday = 0
-    case Tuesday
-    case Wednesday
-    case Thursday
-    case Friday
-    case Saturday
-}
-
 class TimeTableEditController: UIViewController {
     @IBOutlet weak var classNum: UITextField!
     @IBOutlet weak var className: UITextField!
@@ -67,6 +58,19 @@ class TimeTableEditController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    //授業データの削除
+    @IBAction func deleteButton(sender: UIButton) {
+        let realm = try! Realm()
+        let deleteData = realm.objects(ClassObject).filter("index == %@", self.classIndex)
+        
+        if !deleteData.isEmpty {//取得データがからでなければ削除を開始する
+            try! realm.write{
+                realm.delete(deleteData)
+            }
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     //入力された授業名、教室が空欄でないことを確認
     private func isValidString() -> Bool {
