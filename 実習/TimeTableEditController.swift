@@ -9,11 +9,22 @@
 import UIKit
 import RealmSwift
 
+enum Weekday: Int {
+    case Monday = 0
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+}
+
 class TimeTableEditController: UIViewController {
     @IBOutlet weak var classNum: UITextField!
     @IBOutlet weak var className: UITextField!
+    @IBOutlet weak var classLabel: UILabel!
     
     var classIndex: Int!
+    let weekdays = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"]
     
     
     override func viewDidLoad() {
@@ -22,6 +33,9 @@ class TimeTableEditController: UIViewController {
         
         self.className.text = object.isEmpty ? "" : object[0].classNam
         self.classNum.text = object.isEmpty ? "" : object[0].classNum
+        
+        //編集画面に今どの時間の授業を編集しているかをここに表示する
+        self.classLabel.text = getPeriodAndWeekday(classIndex)
     }
 
     
@@ -49,7 +63,8 @@ class TimeTableEditController: UIViewController {
                 }
             }
         }
-        
+        //元の画面に戻る
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -60,5 +75,18 @@ class TimeTableEditController: UIViewController {
         } else {//入力が正常にされていればデータの追加および編集を行う
             return true
         }
+    }
+    
+    //引数の数字から曜日と時限を表した文字列を返す
+    func getPeriodAndWeekday(index: Int) -> String? {
+        var indexString: String!//ここに文字列を入れる
+        let weekday = self.weekdays[index%6]
+        if index > 35 {
+            return nil
+        }
+        
+        indexString = "\(weekday) \(Int(index/6) + 1)限"
+        
+        return indexString
     }
 }
