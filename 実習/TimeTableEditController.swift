@@ -17,13 +17,38 @@ class TimeTableEditController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print("viewdid")
-        print("\(classIndex)")
+        let realm = try! Realm()
+        let object = realm.objects(ClassObject).filter("index == %@",self.classIndex)
+        
+        self.className.text = object.isEmpty ? "" : object[0].classNam
+        self.classNum.text = object.isEmpty ? "" : object[0].classNum
     }
 
     
     @IBAction func addButton(sender: UIButton) {
+        /*まずはこのindexで表される授業データがすでに存在しているかを確認する
+         *データが存在していたら編集、存在していなかったら新規にデータを追加する
+         */
+        if isValidString() {//入力が有効の時の処理
+            let classData = ClassObject()
+            classData.classNam = self.className.text!
+            classData.classNum = self.classNum.text!
+            classData.index = self.classIndex
+            
+            //データの有無の確認
+            let realm = try! Realm()
+            let result = realm.objects(ClassObject).filter("index == %@",self.classIndex).first//realmオブジェクトからClassObjectの中からindexが同じものを取得する
+            if (result == nil) {
+                try! realm.write{//データの追加
+                    realm.add(classData)
+                }
+            } else {//nilでないデータが返されていたらそのデータを編集する
+                try! realm.write {
+                    result?.classNam = self.className.text!
+                    result?.classNum = self.classNum.text!
+                }
+            }
+        }
         
     }
     
@@ -33,17 +58,6 @@ class TimeTableEditController: UIViewController {
         if className.text?.characters.count == 0 || classNum.text?.characters.count == 0 {
             return false
         } else {//入力が正常にされていればデータの追加および編集を行う
-            let classData = ClassObject()
-            classData.classNam = self.className.text!
-            classData.classNum = self.classNum.text!
-            classData.index = self.classIndex
-            
-            /*まずはこのindexで表される授業データがすでに存在しているかを確認する
-             *データが存在していたら編集、存在していなかったら新規にデータを追加する
-             */
-            let realm = try! Realm()//defaultのrealmオブジェクトの取得
-            
-            
             return true
         }
     }

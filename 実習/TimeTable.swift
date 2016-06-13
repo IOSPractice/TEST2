@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -24,7 +25,24 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         editButton = UIBarButtonItem(title: "編集", style: .Plain, target: self, action: #selector(TimeTable.editBtnAction(_:)))
         self.navigationItem.rightBarButtonItems = [editButton]
+        
+//        print("画面を読み込みました")
+//        let realm = try! Realm()
+//        let objects = realm.objects(ClassObject)
+//        if objects.isEmpty {
+//            print("配列は空でsうr")
+//        }
+//        for object in objects {
+//            print(object.classNum)
+//            print(object.classNum)
+//            print(object.index)
+//        }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.collectionView.reloadData()
+    }
+    
     
     //編集ボタンのアクション
     func editBtnAction(sender: AnyObject) {
@@ -60,9 +78,14 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! MyCollectionViewCell
         
+        print(indexPath.row)
         cell.layer.borderWidth = 0.5
-        cell.className.text = "これはテストです"
-        cell.classNum.text = "1001"
+        let realm = try! Realm()
+        let cellData = realm.objects(ClassObject).filter("index == %@", indexPath.row)
+
+        //データがなければ空列を入れる
+        cell.className.text = cellData.isEmpty ? "" : cellData.first?.classNam
+        cell.classNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
         cells.append(cell)
         
         return cell
@@ -71,8 +94,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
     
     //セルの選択時のアクション
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("\(indexPath.row)")
-        if isMovable {
+
+        if isMovable {//遷移可能な状態であれば編集画面へ移動する
             let timeTableEditController = self.storyboard?.instantiateViewControllerWithIdentifier("TimeTableEditController") as! TimeTableEditController
             timeTableEditController.classIndex = indexPath.row
             self.navigationController?.pushViewController(timeTableEditController, animated: true)
