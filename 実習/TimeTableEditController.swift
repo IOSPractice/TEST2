@@ -27,6 +27,8 @@ class TimeTableEditController: UIViewController {
         
         //編集画面に今どの時間の授業を編集しているかをここに表示する
         self.classLabel.text = getPeriodAndWeekday(classIndex)
+        
+        print("count is \(self.navigationController?.viewControllers.count)")
     }
 
     
