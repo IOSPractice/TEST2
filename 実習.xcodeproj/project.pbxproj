@@ -20,6 +20,7 @@
 		AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */; };
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
 		AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC584391D09C54F00881360 /* TimeTableEditController.swift */; };
+		AEDF28CA1D17CE4300C80121 /* bustime.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEDF28C91D17CE4300C80121 /* bustime.plist */; };
 		BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */; };
 		BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */; };
 		BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */; };
@@ -60,6 +61,7 @@
 		AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		AEC584391D09C54F00881360 /* TimeTableEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEditController.swift; sourceTree = "<group>"; };
+		AEDF28C91D17CE4300C80121 /* bustime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = bustime.plist; path = ../../../Desktop/programing/Swift/busApplication/bustime.plist; sourceTree = "<group>"; };
 		BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP00.png; sourceTree = "<group>"; };
 		BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP01.png; sourceTree = "<group>"; };
 		BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP02.png; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
 				AE24CDD61D1799BE00D706FC /* Bustime.storyboard */,
 				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
+				AEDF28C91D17CE4300C80121 /* bustime.plist */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
 				AE5A63A01CE58373003C5990 /* Info.plist */,
@@ -249,6 +252,7 @@
 				BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */,
 				BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */,
 				BEDFBD921CF0E81B0060B3FA /* TDUMAP03.png in Resources */,
+				AEDF28CA1D17CE4300C80121 /* bustime.plist in Resources */,
 				BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */,
 				BEDFBD951CF0E81B0060B3FA /* TDUMAP09.png in Resources */,
 				CA10FD761CFBC01E00F6C026 /* Task.storyboard in Resources */,
