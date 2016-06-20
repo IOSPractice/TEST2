@@ -136,7 +136,7 @@
         <!--Bustime-->
         <scene sceneID="oij-JQ-pAk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Bustime" referencedIdentifier="Bustime" id="qlk-Z3-FIl" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Bustime" storyboardName="Bustime" referencedIdentifier="Bustime" id="qlk-Z3-FIl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3i-oX-nJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083.5" y="1159"/>

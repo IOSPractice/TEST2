@@ -11,6 +11,7 @@
 		AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE15C4E21CF53DF60086CD3E /* MyLabel.swift */; };
 		AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */; };
 		AE24CDD71D1799BE00D706FC /* Bustime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE24CDD61D1799BE00D706FC /* Bustime.storyboard */; };
+		AE24CDDB1D179A9300D706FC /* Bustime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE24CDDA1D179A9300D706FC /* Bustime.swift */; };
 		AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A63941CE58373003C5990 /* AppDelegate.swift */; };
 		AE5A63971CE58373003C5990 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A63961CE58373003C5990 /* Main.swift */; };
 		AE5A639A1CE58373003C5990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63981CE58373003C5990 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		AE15C4E21CF53DF60086CD3E /* MyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
 		AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE24CDD61D1799BE00D706FC /* Bustime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bustime.storyboard; sourceTree = "<group>"; };
+		AE24CDDA1D179A9300D706FC /* Bustime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bustime.swift; sourceTree = "<group>"; };
 		AE5A63911CE58373003C5990 /* 実習.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "実習.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5A63941CE58373003C5990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5A63961CE58373003C5990 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
 				AE24CDD61D1799BE00D706FC /* Bustime.storyboard */,
+				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
 				AE5A63A01CE58373003C5990 /* Info.plist */,
@@ -321,6 +324,7 @@
 				BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */,
 				AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */,
 				AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */,
+				AE24CDDB1D179A9300D706FC /* Bustime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
