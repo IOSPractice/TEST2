@@ -12,7 +12,13 @@ class Bustime: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let button = UIButton(frame: CGRectMake(0, 0, 80, 80))
+        button.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
+        button.layer.cornerRadius = 20
+        button.backgroundColor = UIColor.brownColor()
+        self.view.addSubview(button)
+        
         // Do any additional setup after loading the view.
     }
 
