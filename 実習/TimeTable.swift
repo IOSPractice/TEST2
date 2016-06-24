@@ -38,8 +38,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         if !isMovable {
             for cell in cells {
-                cell.className.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
-                cell.classNum.backgroundColor = UIColor.whiteColor()
+                cell.ClassName.backgroundColor =  UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
+                cell.ClassNum.backgroundColor = UIColor.whiteColor()
                 editButton.title = "完了"
                 
             }
@@ -47,8 +47,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
             //collectionView.reloadData()
         } else {
             for cell in cells {
-                cell.className.backgroundColor = UIColor.whiteColor()
-                cell.classNum.backgroundColor = UIColor.lightGrayColor()
+                cell.ClassName.backgroundColor = UIColor.whiteColor()
+                cell.ClassNum.backgroundColor = UIColor.lightGrayColor()
                 editButton.title = "編集"
             }
             isMovable = false
@@ -71,8 +71,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         let cellData = realm.objects(ClassObject).filter("index == %@", indexPath.row)
 
         //データがなければ空列を入れる
-        cell.className.text = cellData.isEmpty ? "" : cellData.first?.classNam
-        cell.classNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
+        cell.ClassName.text = cellData.isEmpty ? "" : cellData.first?.classNam
+        cell.ClassNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
         
         print(cell.subviews[0])
         

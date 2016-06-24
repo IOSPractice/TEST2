@@ -11,8 +11,8 @@ import UIKit
 class MyCollectionViewCell : UICollectionViewCell {
         
 
-    @IBOutlet weak var className: UITextView!
-    @IBOutlet weak var classNum: UITextView!
+    @IBOutlet weak var ClassName: UILabel!
+    @IBOutlet weak var ClassNum: UILabel!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

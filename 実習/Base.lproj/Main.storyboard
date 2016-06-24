@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-Kn-7zu">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-4P-DKv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-4P-DKv">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
                                         <color key="backgroundColor" red="0.39554870336153314" green="1" blue="0.62588575453346018" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -32,7 +32,7 @@
                                             <segue destination="0th-94-io6" kind="show" id="rKU-LS-eip"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-md-Bev">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-md-Bev">
                                         <rect key="frame" x="0.0" y="107" width="600" height="108"/>
                                         <color key="backgroundColor" red="0.29237523143326705" green="0.88735590693730537" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -43,7 +43,7 @@
                                             <segue destination="dr6-7D-Q5A" kind="show" id="8X7-QH-Ya4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-ym-kHb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-ym-kHb">
                                         <rect key="frame" x="0.0" y="215" width="600" height="107"/>
                                         <color key="backgroundColor" red="0.78038362321701649" green="0.69568319051801897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -54,7 +54,7 @@
                                             <segue destination="e0b-6R-9jr" kind="show" id="IvH-NS-g29"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-b0-7w3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-b0-7w3">
                                         <rect key="frame" x="0.0" y="322" width="600" height="108"/>
                                         <color key="backgroundColor" red="1" green="0.62598196551188912" blue="0.73110571080127329" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -65,7 +65,7 @@
                                             <segue destination="8RO-6f-6Kc" kind="show" id="tId-mv-HIN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8x-RC-7HY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8x-RC-7HY">
                                         <rect key="frame" x="0.0" y="429" width="600" height="107"/>
                                         <color key="backgroundColor" red="1" green="0.72334137360923179" blue="0.28611791088241112" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -149,9 +149,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9sS-FY-PA9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.58518423176347445" green="0.97934782416603727" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3083012643106362" green="0.93124759426700554" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.31622869318181823" green="0.21632613751034119" blue="0.21688730699889175" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.29024621212121215" green="0.13262242657953668" blue="0.093222138752653949" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
