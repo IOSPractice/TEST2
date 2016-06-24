@@ -28,12 +28,12 @@ class TimeTableEditController: UIViewController {
         //編集画面に今どの時間の授業を編集しているかをここに表示する
         self.classLabel.text = getPeriodAndWeekday(classIndex)
         
-        print("count is \(self.navigationController?.viewControllers.count)")
     }
 
     
     @IBAction func addButton(sender: UIButton) {
-        /*まずはこのindexで表される授業データがすでに存在しているかを確認する
+        /*
+         *まずはこのindexで表される授業データがすでに存在しているかを確認する
          *データが存在していたら編集、存在していなかったら新規にデータを追加する
          */
         if isValidString() {//入力が有効の時の処理
