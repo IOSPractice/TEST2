@@ -70,50 +70,30 @@ public extension NSDate {
 }
 
 
-class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Bustime: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var settingTableView: UITableView!
+    @IBOutlet weak var tableView: BustimeTableView!
+    @IBOutlet weak var settingTableView: SettingTableView!
     
     var busDates: [(NSDate, String)] = []
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blackColor()
+
+        //ファイルからバスの時刻表データを取得する
         busDates = self.getBustimes()
-        print(busDates.count)
-        // Do any additional setup after loading the view.
+        busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
+        
+        tableView.initialize(busDates)
+        settingTableView.initialize()
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView.tag == 0 {
-            return busDates.count
-        } else {
-            return 10
-        }
-        
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
-
-        /*something code...*/
-        if tableView.tag == 0 {
-            cell.textLabel?.text = "\(formatFromNSDate(busDates[indexPath.row].0))発"
-            cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
-        } else if tableView.tag == 1 {
-            cell.textLabel?.text = "SettingMenu"
-        }
-        
-        return cell
-    }
     
     //NSArrayに格納されている文字列の時間をNSDate型に変換し、配列で返す
     func pickUpDateFromNSArray(bustime: NSArray, station: String) -> [(NSDate, String)] {
@@ -168,14 +148,4 @@ class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return dateItems
     }
-    
-    
-    func formatFromNSDate(date: NSDate) -> String {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        formatter.timeZone = NSTimeZone(name: "GMT")
-        formatter.dateFormat = "HH:mm"
-        return formatter.stringFromDate(date)
-    }
-
 }
