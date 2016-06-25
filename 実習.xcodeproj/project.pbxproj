@@ -112,6 +112,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AE50B76A1D1E71E800CD1EA3 /* バス時刻アプリ */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF28C91D17CE4300C80121 /* bustime.plist */,
+				AE24CDD61D1799BE00D706FC /* Bustime.storyboard */,
+				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
+			);
+			name = "バス時刻アプリ";
+			sourceTree = "<group>";
+		};
+		AE50B76B1D1E723200CD1EA3 /* 時間割 */ = {
+			isa = PBXGroup;
+			children = (
+				AE15C4E21CF53DF60086CD3E /* MyLabel.swift */,
+				AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */,
+				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
+				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
+				AEC584391D09C54F00881360 /* TimeTableEditController.swift */,
+				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
+			);
+			name = "時間割";
+			sourceTree = "<group>";
+		};
 		AE5A63881CE58373003C5990 = {
 			isa = PBXGroup;
 			children = (
@@ -137,16 +160,9 @@
 				BEDFBD701CF0E6910060B3FA /* TDUMAP */,
 				AE5A63941CE58373003C5990 /* AppDelegate.swift */,
 				AE5A63961CE58373003C5990 /* Main.swift */,
-				AE1799811CF2E88100D1CE16 /* MyCollectionViewCell.swift */,
-				AE15C4E21CF53DF60086CD3E /* MyLabel.swift */,
-				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
-				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
-				AEC584391D09C54F00881360 /* TimeTableEditController.swift */,
-				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
-				AE24CDD61D1799BE00D706FC /* Bustime.storyboard */,
-				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
-				AEDF28C91D17CE4300C80121 /* bustime.plist */,
+				AE50B76B1D1E723200CD1EA3 /* 時間割 */,
+				AE50B76A1D1E71E800CD1EA3 /* バス時刻アプリ */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
 				AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */,
 				AE5A63A01CE58373003C5990 /* Info.plist */,

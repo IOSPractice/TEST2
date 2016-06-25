@@ -21,6 +21,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fBS-pH-F2M">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.16041431759999999" green="0.60253277319999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="OYd-R9-y7S">
                                         <rect key="frame" x="0.0" y="28" width="300" height="44"/>
@@ -28,6 +29,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYd-R9-y7S" id="8kl-yZ-IHG">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="tintColor" red="0.58518423180000001" green="0.97934782419999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -36,16 +38,35 @@
                                     <outlet property="delegate" destination="HMS-25-jgl" id="6Ru-cp-2gy"/>
                                 </connections>
                             </tableView>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-Tj-IZx">
+                                <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HYD-LV-k5O">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HYD-LV-k5O" id="YUW-so-nZ3">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="leading" secondItem="AZz-SP-B1A" secondAttribute="leading" id="Ecj-kM-fVU"/>
                             <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="fBS-pH-F2M" secondAttribute="bottom" id="FjK-Hg-5yl"/>
+                            <constraint firstAttribute="trailing" secondItem="rtS-Tj-IZx" secondAttribute="trailing" id="egI-f3-W6r"/>
+                            <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="rtS-Tj-IZx" secondAttribute="bottom" id="f4x-KV-NSj"/>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="miX-kH-tXk"/>
+                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="s1x-1l-AIF"/>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.5" id="wCZ-vz-e85"/>
+                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="width" secondItem="fBS-pH-F2M" secondAttribute="width" id="yOB-Vr-L8h"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="settingTableView" destination="rtS-Tj-IZx" id="EH8-Kr-HP5"/>
                         <outlet property="tableView" destination="fBS-pH-F2M" id="Rbq-5H-v9o"/>
                     </connections>
                 </viewController>

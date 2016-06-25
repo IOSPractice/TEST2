@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension NSDate {
+public extension NSDate {
     //unitに指定されたNSDateのコンポーネントをdurationだけ前に戻す
     func before(unit: NSCalendarUnit, duration: Int) -> NSDate {
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
@@ -72,28 +72,17 @@ extension NSDate {
 
 class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-//    var tableView: UITableView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var settingTableView: UITableView!
     
     var busDates: [(NSDate, String)] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let screenWidth = self.view.bounds.width
-//        let screenHeight = self.view.bounds.height
-//        
-//        tableView = UITableView(frame: CGRectMake(0, 0, screenWidth/2, screenHeight))
-//        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.layer.position = CGPoint(x: screenWidth/4, y: screenHeight/2)
-//        tableView.layer.borderColor = UIColor.brownColor().CGColor
-//        tableView.layer.borderWidth = 1.0
-//        self.view.addSubview(tableView)
-        
+        self.view.backgroundColor = UIColor.blackColor()
         busDates = self.getBustimes()
+        print(busDates.count)
         // Do any additional setup after loading the view.
     }
 
@@ -104,14 +93,24 @@ class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        if tableView.tag == 0 {
+            return busDates.count
+        } else {
+            return 10
+        }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
+
         /*something code...*/
-        
+        if tableView.tag == 0 {
+            cell.textLabel?.text = "\(formatFromNSDate(busDates[indexPath.row].0))発"
+            cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
+        } else if tableView.tag == 1 {
+            cell.textLabel?.text = "SettingMenu"
+        }
         
         return cell
     }
@@ -176,7 +175,6 @@ class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
         formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         formatter.timeZone = NSTimeZone(name: "GMT")
         formatter.dateFormat = "HH:mm"
-        print("バス発車時刻\(date)")
         return formatter.stringFromDate(date)
     }
 
