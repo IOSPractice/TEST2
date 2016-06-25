@@ -72,7 +72,8 @@ extension NSDate {
 
 class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var tableView: UITableView!
+//    var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var busDates: [(NSDate, String)] = []
     
@@ -80,17 +81,17 @@ class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let screenWidth = self.view.bounds.width
-        let screenHeight = self.view.bounds.height
-        
-        tableView = UITableView(frame: CGRectMake(0, 0, screenWidth/2, screenHeight))
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.layer.position = CGPoint(x: screenWidth/4, y: screenHeight/2)
-        tableView.layer.borderColor = UIColor.brownColor().CGColor
-        tableView.layer.borderWidth = 1.0
-        self.view.addSubview(tableView)
+//        let screenWidth = self.view.bounds.width
+//        let screenHeight = self.view.bounds.height
+//        
+//        tableView = UITableView(frame: CGRectMake(0, 0, screenWidth/2, screenHeight))
+//        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.layer.position = CGPoint(x: screenWidth/4, y: screenHeight/2)
+//        tableView.layer.borderColor = UIColor.brownColor().CGColor
+//        tableView.layer.borderWidth = 1.0
+//        self.view.addSubview(tableView)
         
         busDates = self.getBustimes()
         // Do any additional setup after loading the view.
@@ -110,6 +111,7 @@ class Bustime: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         /*something code...*/
+        
         
         return cell
     }

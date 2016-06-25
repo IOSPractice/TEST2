@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Bustime-->
@@ -16,8 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="AZz-SP-B1A">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fBS-pH-F2M">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="OYd-R9-y7S">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYd-R9-y7S" id="8kl-yZ-IHG">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HMS-25-jgl" id="OxX-W7-uLM"/>
+                                    <outlet property="delegate" destination="HMS-25-jgl" id="6Ru-cp-2gy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fBS-pH-F2M" firstAttribute="leading" secondItem="AZz-SP-B1A" secondAttribute="leading" id="Ecj-kM-fVU"/>
+                            <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="fBS-pH-F2M" secondAttribute="bottom" id="FjK-Hg-5yl"/>
+                            <constraint firstItem="fBS-pH-F2M" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="miX-kH-tXk"/>
+                            <constraint firstItem="fBS-pH-F2M" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.5" id="wCZ-vz-e85"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="fBS-pH-F2M" id="Rbq-5H-v9o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4E-qd-rHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
