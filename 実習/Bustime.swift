@@ -85,7 +85,9 @@ class Bustime: UIViewController {
         busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
         
         tableView.initialize(busDates)
+        tableView.reloadData()
         settingTableView.initialize()
+        settingTableView.reloadData()
 
     }
 
