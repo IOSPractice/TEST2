@@ -74,7 +74,6 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: BustimeTableView!     //バスの時刻表を表示するためのtableView
     @IBOutlet weak var settingTableView: UITableView!
-    @IBOutlet weak var datePicker: UIDatePicker!
     
     var busDates: [(NSDate, String)] = []
     
@@ -85,8 +84,6 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //非選択時はDatePickerは非表示にする
-        //datePicker.hidden = true
         //ファイルからバスの時刻表データを取得する
         busDates = self.getBustimes()
         busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
@@ -110,7 +107,19 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //セクションごとのセル数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRowsInSections[section]
+        if section == 0 {
+            return 2
+        } else if section == 1 {
+            return 1
+        } else {
+            return 0
+        }
+    }
+    
+    
+    //セクションのタイトルを返す
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitle[section] as String
     }
 
 
@@ -139,15 +148,17 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.textLabel?.text = "目的地設定"
         default:
             break
-            
         }
+        
         return cell
     }
+    
 
     @IBAction func valueChanged(sender: UIDatePicker) {
+        
     }
 
-    
+
     //NSArrayに格納されている文字列の時間をNSDate型に変換し、配列で返す
     func pickUpDateFromNSArray(bustime: NSArray, station: String) -> [(NSDate, String)] {
         var bustimeDates: [(NSDate, String)] = []

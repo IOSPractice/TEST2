@@ -39,7 +39,7 @@
                                 </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-Tj-IZx">
-                                <rect key="frame" x="206" y="0.0" width="394" height="368"/>
+                                <rect key="frame" x="206" y="0.0" width="394" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSetting" id="HYD-LV-k5O">
@@ -56,34 +56,20 @@
                                     <outlet property="delegate" destination="HMS-25-jgl" id="68k-f0-ufz"/>
                                 </connections>
                             </tableView>
-                            <datePicker opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-Oz-ZD3">
-                                <rect key="frame" x="206" y="368" width="394" height="232"/>
-                                <color key="backgroundColor" red="0.48890286644966408" green="0.69813032551852783" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="488608761.60776103">
-                                    <!--2016-06-26 04:39:21 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="valueChanged:" destination="HMS-25-jgl" eventType="valueChanged" id="k36-ox-tCt"/>
-                                </connections>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="cnP-Oz-ZD3" secondAttribute="bottom" id="2d7-6G-FFs"/>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.3" id="5iH-y3-7sj"/>
-                            <constraint firstAttribute="trailing" secondItem="rtS-Tj-IZx" secondAttribute="trailing" id="D7f-Jn-sx6"/>
-                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.7" constant="-26" id="F5A-I2-Wk1"/>
-                            <constraint firstItem="cnP-Oz-ZD3" firstAttribute="top" secondItem="rtS-Tj-IZx" secondAttribute="bottom" id="Ijb-nD-IPr"/>
-                            <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="rtS-Tj-IZx" secondAttribute="bottom" constant="232" id="QCF-z4-4u7"/>
-                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="YZn-QU-oR1"/>
-                            <constraint firstAttribute="trailing" secondItem="cnP-Oz-ZD3" secondAttribute="trailing" id="Zop-01-L6a"/>
+                            <constraint firstAttribute="trailing" secondItem="rtS-Tj-IZx" secondAttribute="trailing" id="IYj-c9-g4V"/>
+                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="RiK-4E-qFe"/>
                             <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="fBS-pH-F2M" secondAttribute="bottom" id="blW-2R-0ky"/>
+                            <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="rtS-Tj-IZx" secondAttribute="bottom" id="mAu-hc-jzb"/>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="mQJ-E9-vno"/>
+                            <constraint firstItem="rtS-Tj-IZx" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.7" constant="-26" id="osz-UN-tuX"/>
                             <constraint firstItem="fBS-pH-F2M" firstAttribute="leading" secondItem="AZz-SP-B1A" secondAttribute="leading" id="wPc-Y0-ulY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="cnP-Oz-ZD3" id="SRw-q6-hdX"/>
                         <outlet property="settingTableView" destination="rtS-Tj-IZx" id="EH8-Kr-HP5"/>
                         <outlet property="tableView" destination="fBS-pH-F2M" id="Rbq-5H-v9o"/>
                     </connections>
