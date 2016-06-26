@@ -70,30 +70,81 @@ public extension NSDate {
 }
 
 
-class Bustime: UIViewController {
+class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tableView: BustimeTableView!
-    @IBOutlet weak var settingTableView: SettingTableView!
+    @IBOutlet weak var tableView: BustimeTableView!     //バスの時刻表を表示するためのtableView
+    @IBOutlet weak var settingTableView: UITableView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     var busDates: [(NSDate, String)] = []
+    
+    let sectionTitle: [String] = ["表示設定", "詳細設定"]
+    let numberOfRowsInSections: [Int] = [2, 1]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //非選択時はDatePickerは非表示にする
+        //datePicker.hidden = true
         //ファイルからバスの時刻表データを取得する
         busDates = self.getBustimes()
         busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
         
         tableView.initialize(busDates)
         tableView.reloadData()
-        settingTableView.initialize()
-        settingTableView.reloadData()
-
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    //セクション数の設定
+     func numberOfRowsInSection(section: Int) -> Int {
+        return sectionTitle.count
+    }
+
+    
+    //セクションごとのセル数
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return numberOfRowsInSections[section]
+    }
+
+
+    //セクションの高さ設定
+    func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 22
+    }
+    
+    
+    //セル内の値設定
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CellSetting")
+        
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                cell.textLabel?.text = "現在時刻"
+            case 1:
+                cell.textLabel?.text = "時刻を入力する"
+            default:
+                break
+            }
+            
+        case 1: break
+            cell.textLabel?.text = "目的地設定"
+        default:
+            break
+            
+        }
+        return cell
+    }
+
+    @IBAction func valueChanged(sender: UIDatePicker) {
     }
 
     
@@ -130,7 +181,6 @@ class Bustime: UIViewController {
         
         return retDate
     }
-    
     
     
     func getBustimes() -> [(NSDate, String)] {
