@@ -83,6 +83,14 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //位置ズレの修正
+        if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+            self.edgesForExtendedLayout = .None
+            self.extendedLayoutIncludesOpaqueBars = false
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+
 
         //ファイルからバスの時刻表データを取得する
         busDates = self.getBustimes()
@@ -100,7 +108,7 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     //セクション数の設定
-     func numberOfRowsInSection(section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sectionTitle.count
     }
 
@@ -144,7 +152,7 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 break
             }
             
-        case 1: break
+        case 1:
             cell.textLabel?.text = "目的地設定"
         default:
             break
