@@ -70,7 +70,7 @@ public extension NSDate {
 }
 
 
-class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, PopUpPickerViewDelegate {
 
     @IBOutlet weak var tableView: BustimeTableView!     //バスの時刻表を表示するためのtableView
     @IBOutlet weak var settingTableView: UITableView!
