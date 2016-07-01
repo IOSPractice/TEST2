@@ -81,7 +81,6 @@ class PopUpPickerView: UIView {
     
     func endPicker() {
         hidePicker()
-        print("endPicker: \(selectedDate)")
         delegate?.pickerView!(datePicker, didSelect: selectedDate)
         selectedDate = nil
     }
@@ -96,15 +95,13 @@ class PopUpPickerView: UIView {
     
     func valuedChangedDate(sender: UIDatePicker) {
         let date = sender.date
-        print("call picker")
-        print(date)
+
         //タイムゾーンの変更
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let dateComps = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: date)
         dateComps.timeZone = NSTimeZone(name: "GMT")
         
         self.selectedDate = calendar.dateFromComponents(dateComps)!
-        print(selectedDate)
     }
 }
 

@@ -75,6 +75,8 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
     @IBOutlet weak var tableView: BustimeTableView!     //バスの時刻表を表示するためのtableView
     @IBOutlet weak var settingTableView: UITableView!
     
+    var datePicker: PopUpPickerView!
+    
     var busDates: [(NSDate, String)] = []
     
     let sectionTitle: [String] = ["表示設定", "詳細設定"]
@@ -96,9 +98,20 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         busDates = self.getBustimes()
         busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
         
+        
         tableView.initialize(busDates)
         tableView.reloadData()
     
+        
+        //UIDatePickerの設定
+        datePicker = PopUpPickerView()
+        datePicker.delegate = self
+        
+        if let window = UIApplication.sharedApplication().keyWindow {
+            window.addSubview(datePicker)
+        } else {
+            self.view.addSubview(datePicker)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -167,12 +180,12 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         if indexPath.section == 0 {
             if indexPath.row == 0 {//表示設定の現在時刻が選択された時
                 scrollToNowDate()
+            } else if indexPath.row == 1 {
+                datePicker.showPicker()
             }
         }
     }
-    
 
-    
 
     //NSArrayに格納されている文字列の時間をNSDate型に変換し、配列で返す
     func pickUpDateFromNSArray(bustime: NSArray, station: String) -> [(NSDate, String)] {
@@ -263,5 +276,24 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
     //指定された時刻に最も近いバス発着時刻のセルをトップにスクロールで持ってくる
     func scrollToSpecifiedDate(date: NSDate) {
         
+        //現在時刻に最も近いバス発着時刻の取得
+        for (i, time) in busDates.enumerate() {
+            print("比較時間 \(formatFromNSDate(time.0))")
+            if date.compare(time.0) == NSComparisonResult.OrderedAscending {
+                //スクロール用のNSIndexPathの作成
+                let index = NSIndexPath(forRow: i, inSection: 0)
+                self.tableView.scrollToRowAtIndexPath(index, atScrollPosition: .Top, animated: true)
+                break
+            }
+        }
+
     }
+    
+    func pickerView(pickerView: UIDatePicker, didSelect date: NSDate?) {
+        if date != nil {
+            print("pickerView")
+            self.scrollToSpecifiedDate(date!)
+        }
+    }
+
 }
