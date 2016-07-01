@@ -166,7 +166,7 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {//表示設定の現在時刻が選択された時
-                scrollToSpecifiedDate()
+                scrollToNowDate()
             }
         }
     }
@@ -238,28 +238,30 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     
-    
     //時刻表と現在時刻を比較し、現在時刻から最も近いバスの発着時刻にあたるセルをトップにスクロールで持ってくる
-    func scrollToSpecifiedDate() {
+    func scrollToNowDate() {
         var nowDate = NSDate()//現在時刻の取得
         
-        //時刻の整形
+        //時刻のタイムゾーンの指定
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let dateComps: NSDateComponents = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: nowDate)
         dateComps.timeZone = NSTimeZone(name: "GMT")
-
         nowDate = calendar.dateFromComponents(dateComps)!
 
-        print("現在時刻\(formatFromNSDate(nowDate))")
         //現在時刻に最も近いバス発着時刻の取得
         for (i, time) in busDates.enumerate() {
             if nowDate.compare(time.0) == NSComparisonResult.OrderedAscending {
                 //スクロール用のNSIndexPathの作成
-                print("比較時刻\(i): \(formatFromNSDate(time.0))")
                 let index = NSIndexPath(forRow: i, inSection: 0)
                 self.tableView.scrollToRowAtIndexPath(index, atScrollPosition: .Top, animated: true)
                 break
             }
         }
+    }
+    
+    
+    //指定された時刻に最も近いバス発着時刻のセルをトップにスクロールで持ってくる
+    func scrollToSpecifiedDate(date: NSDate) {
+        
     }
 }

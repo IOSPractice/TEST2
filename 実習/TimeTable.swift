@@ -24,7 +24,6 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         editButton = UIBarButtonItem(title: "編集", style: .Plain, target: self, action: #selector(TimeTable.editBtnAction(_:)))
         self.navigationItem.rightBarButtonItems = [editButton]
-        
     }
     
     override func viewWillAppear(animated: Bool) {
