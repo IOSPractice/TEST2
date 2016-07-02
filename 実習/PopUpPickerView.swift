@@ -85,7 +85,7 @@ class PopUpPickerView: UIView {
         selectedDate = nil
     }
     
-    private func hidePicker() {
+    func hidePicker() {
         let screenSize = UIScreen.mainScreen().bounds.size
         
         UIView.animateWithDuration(0.2) {

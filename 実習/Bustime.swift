@@ -119,6 +119,15 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        let viewController = self.navigationController?.viewControllers
+        
+        //DatePickerを表示したまま戻らないようにする処理
+        if ((viewController?.contains(self)) != nil) {
+            datePicker.hidePicker()
+        }
+    }
+    
     
     //セクション数の設定
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -278,7 +287,6 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         
         //現在時刻に最も近いバス発着時刻の取得
         for (i, time) in busDates.enumerate() {
-            print("比較時間 \(formatFromNSDate(time.0))")
             if date.compare(time.0) == NSComparisonResult.OrderedAscending {
                 //スクロール用のNSIndexPathの作成
                 let index = NSIndexPath(forRow: i, inSection: 0)
@@ -291,7 +299,6 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
     
     func pickerView(pickerView: UIDatePicker, didSelect date: NSDate?) {
         if date != nil {
-            print("pickerView")
             self.scrollToSpecifiedDate(date!)
         }
     }
