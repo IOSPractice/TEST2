@@ -22,6 +22,7 @@
 		AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */; };
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
 		AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC584391D09C54F00881360 /* TimeTableEditController.swift */; };
+		AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */; };
 		BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */; };
 		BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */; };
 		BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */; };
@@ -64,6 +65,7 @@
 		AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		AEC584391D09C54F00881360 /* TimeTableEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEditController.swift; sourceTree = "<group>"; };
+		AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSettingViewController.swift; sourceTree = "<group>"; };
 		BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP00.png; sourceTree = "<group>"; };
 		BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP01.png; sourceTree = "<group>"; };
 		BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP02.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				AE4704C31D2642AB00555D99 /* PopUpPickerView.swift */,
 				AE50B76C1D1E72C500CD1EA3 /* BustimeTableView.swift */,
 				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
+				AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */,
 				CAB7EDD31D20E3AF008EA339 /* bustime.plist */,
 			);
 			name = "バス時刻アプリ";
@@ -345,6 +348,7 @@
 				AE5A63951CE58373003C5990 /* AppDelegate.swift in Sources */,
 				CA10FD781CFBC02F00F6C026 /* Task.swift in Sources */,
 				BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */,
+				AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */,
 				AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */,
 				AE4704C41D2642AB00555D99 /* PopUpPickerView.swift in Sources */,
 				AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */,
