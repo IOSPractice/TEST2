@@ -72,9 +72,7 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         //データがなければ空列を入れる
         cell.ClassName.text = cellData.isEmpty ? "" : cellData.first?.classNam
         cell.ClassNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
-        
-        print(cell.subviews[0])
-        
+    
         cells.append(cell)
         
         return cell
