@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class Map: UIViewController {
     
     
@@ -17,6 +18,7 @@ class Map: UIViewController {
     
     //@IBOutlet weak var Label: UILabel!
     @IBOutlet weak var Label: UILabel!
+    
     
     let gou1 = 1100.0
     let gou2 = 2100.0
@@ -28,12 +30,13 @@ class Map: UIViewController {
     let gou12 = 12100.0
     let gou12s = 120.0
     
-    private var ImageView: UIImageView!
-    
+    //private var ImageView: UIImageView!
+    @IBOutlet weak var ImageView: UIImageView!
+
     func ImageViewTest(num:Double) -> Void {
         // UIImageViewを作成する.
         
-        ImageView = UIImageView(frame: CGRectMake(0,0,350,270))
+        //ImageView = UIImageView(frame: CGRectMake(0,0,350,270))
         // 表示する画像を設定する.
         
         //1
@@ -206,6 +209,9 @@ class Map: UIViewController {
         
         // 次の入力の為にtextFieldをクリアする
         //TextField.text = nil
+        
+        TextField.resignFirstResponder()
+        
         
     }
     

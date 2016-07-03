@@ -9,6 +9,8 @@ import UIKit
 
 class Main: UIViewController {
     
+    
+    
     @IBOutlet weak var timeTableBtn: UIButton!
     @IBOutlet weak var mapBtn: UIButton!
     @IBOutlet weak var yunipaBtn: UIButton!

@@ -23,6 +23,10 @@
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
 		AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC584391D09C54F00881360 /* TimeTableEditController.swift */; };
 		AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */; };
+		BE7F37801D2977DB0052AB93 /* MAP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F377F1D2977DB0052AB93 /* MAP2.swift */; };
+		BE7F37821D2978600052AB93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F37811D2978600052AB93 /* MapKit.framework */; };
+		BE7F37841D2981270052AB93 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7F37831D2981270052AB93 /* Map.storyboard */; };
+		BE7F37861D2984AF0052AB93 /* MAP2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7F37851D2984AF0052AB93 /* MAP2.storyboard */; };
 		BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */; };
 		BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */; };
 		BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */; };
@@ -34,7 +38,6 @@
 		BEDFBD971CF0E81B0060B3FA /* TDUMAP11.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD8D1CF0E81B0060B3FA /* TDUMAP11.png */; };
 		BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD8E1CF0E81B0060B3FA /* TDUMAP12.png */; };
 		BEDFBE161CF29F1E0060B3FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */; };
-		BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBE171CF2BDF50060B3FA /* Map.storyboard */; };
 		BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFBE191CF2BE170060B3FA /* Map.swift */; };
 		CA10FD761CFBC01E00F6C026 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA10FD751CFBC01E00F6C026 /* Task.storyboard */; };
 		CA10FD781CFBC02F00F6C026 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10FD771CFBC02F00F6C026 /* Task.swift */; };
@@ -66,6 +69,10 @@
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		AEC584391D09C54F00881360 /* TimeTableEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEditController.swift; sourceTree = "<group>"; };
 		AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSettingViewController.swift; sourceTree = "<group>"; };
+		BE7F377F1D2977DB0052AB93 /* MAP2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAP2.swift; sourceTree = "<group>"; };
+		BE7F37811D2978600052AB93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BE7F37831D2981270052AB93 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = ../../Map.storyboard; sourceTree = "<group>"; };
+		BE7F37851D2984AF0052AB93 /* MAP2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MAP2.storyboard; sourceTree = "<group>"; };
 		BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP00.png; sourceTree = "<group>"; };
 		BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP01.png; sourceTree = "<group>"; };
 		BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP02.png; sourceTree = "<group>"; };
@@ -77,7 +84,6 @@
 		BEDFBD8D1CF0E81B0060B3FA /* TDUMAP11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP11.png; sourceTree = "<group>"; };
 		BEDFBD8E1CF0E81B0060B3FA /* TDUMAP12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP12.png; sourceTree = "<group>"; };
 		BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		BEDFBE171CF2BDF50060B3FA /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		BEDFBE191CF2BE170060B3FA /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		CA10FD751CFBC01E00F6C026 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		CA10FD771CFBC02F00F6C026 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7F37821D2978600052AB93 /* MapKit.framework in Frameworks */,
 				BEDFBE161CF29F1E0060B3FA /* CoreLocation.framework in Frameworks */,
 				FC1DE01393C832678727177D /* Pods___.framework in Frameworks */,
 			);
@@ -111,9 +118,12 @@
 		8D46F3D331232E5DFD78B999 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */,
+				BE7F37811D2978600052AB93 /* MapKit.framework */,
 				0F7AF6C229AAEBCCDA41BC2C /* Pods___.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AE50B76A1D1E71E800CD1EA3 /* バス時刻アプリ */ = {
@@ -145,11 +155,9 @@
 		AE5A63881CE58373003C5990 = {
 			isa = PBXGroup;
 			children = (
-				BEDFBE151CF29F1E0060B3FA /* CoreLocation.framework */,
 				AE5A63931CE58373003C5990 /* 実習 */,
 				AE5A63921CE58373003C5990 /* Products */,
 				4DE59ADF454028EDC4F2F57D /* Pods */,
-				8D46F3D331232E5DFD78B999 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,10 +172,11 @@
 		AE5A63931CE58373003C5990 /* 実習 */ = {
 			isa = PBXGroup;
 			children = (
-				BEDFBD701CF0E6910060B3FA /* TDUMAP */,
+				8D46F3D331232E5DFD78B999 /* Frameworks */,
 				AE5A63941CE58373003C5990 /* AppDelegate.swift */,
 				AE5A63961CE58373003C5990 /* Main.swift */,
 				AE5A63981CE58373003C5990 /* Main.storyboard */,
+				BEDFBD701CF0E6910060B3FA /* TDUMAP */,
 				AE50B76B1D1E723200CD1EA3 /* 時間割 */,
 				AE50B76A1D1E71E800CD1EA3 /* バス時刻アプリ */,
 				AE5A639B1CE58373003C5990 /* Assets.xcassets */,
@@ -175,8 +184,6 @@
 				AE5A63A01CE58373003C5990 /* Info.plist */,
 				CA95BA321CEB7A5A006E791D /* WebView.swift */,
 				CA95BA341CEB7A7B006E791D /* WebView.storyboard */,
-				BEDFBE171CF2BDF50060B3FA /* Map.storyboard */,
-				BEDFBE191CF2BE170060B3FA /* Map.swift */,
 				CA10FD751CFBC01E00F6C026 /* Task.storyboard */,
 				CA10FD771CFBC02F00F6C026 /* Task.swift */,
 			);
@@ -186,6 +193,10 @@
 		BEDFBD701CF0E6910060B3FA /* TDUMAP */ = {
 			isa = PBXGroup;
 			children = (
+				BE7F37831D2981270052AB93 /* Map.storyboard */,
+				BEDFBE191CF2BE170060B3FA /* Map.swift */,
+				BE7F377F1D2977DB0052AB93 /* MAP2.swift */,
+				BE7F37851D2984AF0052AB93 /* MAP2.storyboard */,
 				BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */,
 				BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */,
 				BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */,
@@ -235,7 +246,12 @@
 				TargetAttributes = {
 					AE5A63901CE58373003C5990 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = E6ZSGD5ZFX;
+						DevelopmentTeam = JZD933J94F;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,14 +283,15 @@
 				AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */,
 				BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */,
 				BEDFBD931CF0E81B0060B3FA /* TDUMAP06.png in Resources */,
+				BE7F37841D2981270052AB93 /* Map.storyboard in Resources */,
 				AE24CDD71D1799BE00D706FC /* Bustime.storyboard in Resources */,
 				BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */,
 				CA95BA351CEB7A7B006E791D /* WebView.storyboard in Resources */,
 				BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */,
+				BE7F37861D2984AF0052AB93 /* MAP2.storyboard in Resources */,
 				BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */,
 				BEDFBD921CF0E81B0060B3FA /* TDUMAP03.png in Resources */,
 				CAB7EDD41D20E3AF008EA339 /* bustime.plist in Resources */,
-				BEDFBE181CF2BDF50060B3FA /* Map.storyboard in Resources */,
 				BEDFBD951CF0E81B0060B3FA /* TDUMAP09.png in Resources */,
 				CA10FD761CFBC01E00F6C026 /* Task.storyboard in Resources */,
 				AE5A639C1CE58373003C5990 /* Assets.xcassets in Resources */,
@@ -339,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7F37801D2977DB0052AB93 /* MAP2.swift in Sources */,
 				AE5A63971CE58373003C5990 /* Main.swift in Sources */,
 				AE001BB61D0BEF2200F14478 /* ClassObject.swift in Sources */,
 				AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */,
@@ -470,7 +488,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "実習/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zissyuu.company;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.test.jisshu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -485,7 +503,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "実習/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zissyuu.company;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.test.jisshu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
