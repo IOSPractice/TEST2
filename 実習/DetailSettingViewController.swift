@@ -13,7 +13,7 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var detailTableView: UITableView!
     
     override func viewDidLoad() {
-        
+        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

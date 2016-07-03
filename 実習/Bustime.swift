@@ -192,13 +192,12 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
             } else if indexPath.row == 1 {
                 datePicker.showPicker()
             }
-        } else if indexPath.section == 2 {
+        } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 let detailViewController = DetailSettingViewController()
                 self.navigationController?.pushViewController(detailViewController, animated: true)
             }
         }
-
     }
 
 

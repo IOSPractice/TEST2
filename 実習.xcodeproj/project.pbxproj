@@ -122,8 +122,8 @@
 				AE24CDD61D1799BE00D706FC /* Bustime.storyboard */,
 				AE4704C31D2642AB00555D99 /* PopUpPickerView.swift */,
 				AE50B76C1D1E72C500CD1EA3 /* BustimeTableView.swift */,
-				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
 				AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */,
+				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
 				CAB7EDD31D20E3AF008EA339 /* bustime.plist */,
 			);
 			name = "バス時刻アプリ";
