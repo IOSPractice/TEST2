@@ -191,13 +191,14 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
                 scrollToNowDate()
             } else if indexPath.row == 1 {
                 datePicker.showPicker()
-            } else if indexPath.section == 2 {
-                if indexPath.row == 0 {
-                    let detailViewController = DetailSettingViewController()
-                    self.navigationController?.pushViewController(detailViewController, animated: true)
-                }
+            }
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                let detailViewController = DetailSettingViewController()
+                self.navigationController?.pushViewController(detailViewController, animated: true)
             }
         }
+
     }
 
 

@@ -9,7 +9,21 @@
 import Foundation
 import UIKit
 
-class DetailSettingViewController: UIViewController {
+class DetailSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var detailTableView: UITableView!
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellDetail")
+        
+        return cell!
+    }
     
 }
