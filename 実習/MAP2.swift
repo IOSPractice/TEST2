@@ -51,7 +51,7 @@ class MAP2: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
         let TDUcoordinate : CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.985898, 139.373045)
         let span = MKCoordinateSpanMake(0.003, 0.003)
         let region = MKCoordinateRegionMake(TDUcoordinate, span)
-        mapView.setRegion(region, animated:true)
+        mapView.setRegion(region, animated:false)
         //mapView.userTrackingMode = MKUserTrackingMode.FollowWithHeading//方向も表示？
         
     }
