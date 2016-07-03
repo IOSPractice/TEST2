@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fBS-pH-F2M" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.3" id="5iH-y3-7sj"/>
+                            <constraint firstItem="fBS-pH-F2M" firstAttribute="width" secondItem="AZz-SP-B1A" secondAttribute="width" multiplier="0.4" id="5iH-y3-7sj"/>
                             <constraint firstAttribute="trailing" secondItem="rtS-Tj-IZx" secondAttribute="trailing" id="IYj-c9-g4V"/>
                             <constraint firstItem="rtS-Tj-IZx" firstAttribute="top" secondItem="AZz-SP-B1A" secondAttribute="top" id="RiK-4E-qFe"/>
                             <constraint firstItem="joo-Zc-435" firstAttribute="top" secondItem="fBS-pH-F2M" secondAttribute="bottom" id="blW-2R-0ky"/>
