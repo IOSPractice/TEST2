@@ -58,8 +58,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-QJ-Njv">
-                                <rect key="frame" x="28" y="12" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-QJ-Njv">
+                                <rect key="frame" x="26" y="10" width="30" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="jtP-7R-IRq" kind="modal" id="EXG-VL-AsL"/>
@@ -77,6 +77,8 @@
                             <constraint firstItem="AGM-jR-zBN" firstAttribute="top" secondItem="vtR-l1-tJb" secondAttribute="bottom" constant="30" id="eCr-sq-1NS"/>
                             <constraint firstItem="Ls4-WQ-HL0" firstAttribute="top" secondItem="vtR-l1-tJb" secondAttribute="bottom" constant="50" id="kgn-CO-y5d"/>
                             <constraint firstItem="wrH-SH-sdX" firstAttribute="top" secondItem="pwD-wX-piC" secondAttribute="bottom" constant="10" id="lea-Rn-hOY"/>
+                            <constraint firstItem="m9c-QJ-Njv" firstAttribute="top" secondItem="gbH-iN-6Ph" secondAttribute="topMargin" constant="10" id="nr7-3n-ce1"/>
+                            <constraint firstItem="m9c-QJ-Njv" firstAttribute="leading" secondItem="gbH-iN-6Ph" secondAttribute="leadingMargin" constant="10" id="ozm-3d-Wl1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wrH-SH-sdX" secondAttribute="trailing" id="pVF-Ko-n5e"/>
                             <constraint firstItem="AGM-jR-zBN" firstAttribute="trailing" secondItem="gbH-iN-6Ph" secondAttribute="trailingMargin" id="qFB-Rz-VsZ"/>
                             <constraint firstItem="wrH-SH-sdX" firstAttribute="centerX" secondItem="gbH-iN-6Ph" secondAttribute="centerX" id="zU9-Dr-ALM"/>
