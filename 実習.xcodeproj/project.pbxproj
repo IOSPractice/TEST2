@@ -25,8 +25,7 @@
 		AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */; };
 		BE7F37801D2977DB0052AB93 /* MAP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F377F1D2977DB0052AB93 /* MAP2.swift */; };
 		BE7F37821D2978600052AB93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F37811D2978600052AB93 /* MapKit.framework */; };
-		BE7F37841D2981270052AB93 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7F37831D2981270052AB93 /* Map.storyboard */; };
-		BE7F37861D2984AF0052AB93 /* MAP2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7F37851D2984AF0052AB93 /* MAP2.storyboard */; };
+		BECA65CD1D29E7AC00A2BD4E /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECA65CC1D29E7AC00A2BD4E /* Map.storyboard */; };
 		BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */; };
 		BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */; };
 		BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */; };
@@ -71,8 +70,7 @@
 		AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSettingViewController.swift; sourceTree = "<group>"; };
 		BE7F377F1D2977DB0052AB93 /* MAP2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAP2.swift; sourceTree = "<group>"; };
 		BE7F37811D2978600052AB93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		BE7F37831D2981270052AB93 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = ../../Map.storyboard; sourceTree = "<group>"; };
-		BE7F37851D2984AF0052AB93 /* MAP2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MAP2.storyboard; sourceTree = "<group>"; };
+		BECA65CC1D29E7AC00A2BD4E /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP00.png; sourceTree = "<group>"; };
 		BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP01.png; sourceTree = "<group>"; };
 		BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TDUMAP02.png; sourceTree = "<group>"; };
@@ -193,10 +191,9 @@
 		BEDFBD701CF0E6910060B3FA /* TDUMAP */ = {
 			isa = PBXGroup;
 			children = (
-				BE7F37831D2981270052AB93 /* Map.storyboard */,
+				BECA65CC1D29E7AC00A2BD4E /* Map.storyboard */,
 				BEDFBE191CF2BE170060B3FA /* Map.swift */,
 				BE7F377F1D2977DB0052AB93 /* MAP2.swift */,
-				BE7F37851D2984AF0052AB93 /* MAP2.storyboard */,
 				BEDFBD851CF0E81B0060B3FA /* TDUMAP00.png */,
 				BEDFBD861CF0E81B0060B3FA /* TDUMAP01.png */,
 				BEDFBD871CF0E81B0060B3FA /* TDUMAP02.png */,
@@ -283,12 +280,11 @@
 				AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */,
 				BEDFBD8F1CF0E81B0060B3FA /* TDUMAP00.png in Resources */,
 				BEDFBD931CF0E81B0060B3FA /* TDUMAP06.png in Resources */,
-				BE7F37841D2981270052AB93 /* Map.storyboard in Resources */,
 				AE24CDD71D1799BE00D706FC /* Bustime.storyboard in Resources */,
+				BECA65CD1D29E7AC00A2BD4E /* Map.storyboard in Resources */,
 				BEDFBD901CF0E81B0060B3FA /* TDUMAP01.png in Resources */,
 				CA95BA351CEB7A7B006E791D /* WebView.storyboard in Resources */,
 				BEDFBD981CF0E81B0060B3FA /* TDUMAP12.png in Resources */,
-				BE7F37861D2984AF0052AB93 /* MAP2.storyboard in Resources */,
 				BEDFBD911CF0E81B0060B3FA /* TDUMAP02.png in Resources */,
 				BEDFBD921CF0E81B0060B3FA /* TDUMAP03.png in Resources */,
 				CAB7EDD41D20E3AF008EA339 /* bustime.plist in Resources */,
