@@ -58,6 +58,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-QJ-Njv">
+                                <rect key="frame" x="28" y="12" width="30" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="jtP-7R-IRq" kind="modal" id="EXG-VL-AsL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -85,6 +92,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRq-tj-3V1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13" y="-29"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="15f-pj-Wnl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="jtP-7R-IRq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPQ-de-ndb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371.5" y="-344"/>
         </scene>
         <!--MAP2-->
         <scene sceneID="rVi-Xm-tke">
