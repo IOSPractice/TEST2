@@ -176,6 +176,8 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
             
         case 1:
             cell.textLabel?.text = "目的地設定"
+            //右矢印の表示
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         default:
             break
         }

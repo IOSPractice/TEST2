@@ -17,12 +17,12 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 20
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellDetail")
-        
+        cell?.textLabel?.text = "\(indexPath.row)"
         return cell!
     }
     
