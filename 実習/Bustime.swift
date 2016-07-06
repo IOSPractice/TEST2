@@ -147,15 +147,22 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
     }
     
     
-    //セクションのタイトルを返す
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitle[section] as String
+    //セクションのタイトル設定
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel(frame: CGRectMake(0, 0, tableView.bounds.width, 50))
+        label.textAlignment = .Left
+        label.text = "  \(sectionTitle[section])"
+        label.baselineAdjustment = .AlignBaselines
+        label.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+        label.font = UIFont.systemFontOfSize(12)
+        
+        return label
     }
 
 
     //セクションの高さ設定
     func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 22
+        return 30
     }
     
     
@@ -196,8 +203,9 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                let detailViewController = DetailSettingViewController()
-                self.navigationController?.pushViewController(detailViewController, animated: true)
+                //ViewControllerのIDから遷移先のインスタンスを作成
+                let detailSettingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailSettingViewController") as! DetailSettingViewController
+                self.navigationController?.pushViewController(detailSettingViewController, animated: true)
             }
         }
     }

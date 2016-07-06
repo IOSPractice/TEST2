@@ -81,7 +81,7 @@
         <!--Detail Setting View Controller-->
         <scene sceneID="8SQ-YO-xVe">
             <objects>
-                <viewController id="EeR-VP-CAt" customClass="DetailSettingViewController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DetailSettingViewController" storyboardIdentifier="DetailSettingViewController" automaticallyAdjustsScrollViewInsets="NO" id="EeR-VP-CAt" customClass="DetailSettingViewController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbq-1w-Nuv"/>
                         <viewControllerLayoutGuide type="bottom" id="XTo-sf-b1u"/>

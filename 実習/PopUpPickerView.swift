@@ -60,7 +60,7 @@ class PopUpPickerView: UIView {
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(PopUpPickerView.cancelPicker))
         let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(PopUpPickerView.endPicker))
-        toolbarItems = [cancelButton, flexSpaceItem, doneButton]
+        toolbarItems = [space, cancelButton, flexSpaceItem, doneButton, space]
         
         pickerToolbar.setItems(toolbarItems, animated: true)
         self.addSubview(pickerToolbar)
