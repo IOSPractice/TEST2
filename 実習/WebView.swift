@@ -6,11 +6,12 @@
 //  Copyright © 2016年 mycompany. All rights reserved.
 //
 //　UNIPAの表示
+// 
 
 import Foundation
 import UIKit
 
-class WebView: UIViewController {
+class WebView: UIViewController,UIWebViewDelegate {
     
     @IBOutlet weak var webview: UIWebView!
     
@@ -40,18 +41,33 @@ class WebView: UIViewController {
     }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.webview.delegate = self
+
+        loadURL()
+    }
+    
+    // ロード時にインジケータをまわす
+    func webViewDidStartLoad(webView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        // インジケータを非表示にする
+        if !webView.loading {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+    }
+    
     // loadURL関数を定義
     func loadURL() {
         let requestURL = NSURL(string: url)
         let request = NSURLRequest(URL: requestURL!)
         webview.loadRequest(request)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        loadURL()
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

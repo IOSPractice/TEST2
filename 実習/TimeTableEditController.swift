@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TimeTableEditController: UIViewController {
+class TimeTableEditController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var classNum: UITextField!
     @IBOutlet weak var className: UITextField!
     @IBOutlet weak var classLabel: UILabel!
@@ -27,11 +27,25 @@ class TimeTableEditController: UIViewController {
         
         //編集画面に今どの時間の授業を編集しているかをここに表示する
         self.classLabel.text = getPeriodAndWeekday(classIndex)
+        
+        //キーボードの完了ボタンの実装
+        let kbToolbar = UIToolbar(frame: CGRectMake(0, 0, self.view.frame.width, 40))
+        kbToolbar.barStyle = .Default
+        //kbToolbar.sizeToFit()
+        
+        let space = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(TimeTableEditController.doneActionButton))
+        kbToolbar.items = [space, doneButton]
+        
+        //ボタンをテキストフィールドに追加
+        className.inputAccessoryView = kbToolbar
+        classNum.inputAccessoryView = kbToolbar
     }
 
     
     @IBAction func addButton(sender: UIButton) {
-        /*まずはこのindexで表される授業データがすでに存在しているかを確認する
+        /*
+         *まずはこのindexで表される授業データがすでに存在しているかを確認する
          *データが存在していたら編集、存在していなかったら新規にデータを追加する
          */
         if isValidString() {//入力が有効の時の処理
@@ -92,5 +106,11 @@ class TimeTableEditController: UIViewController {
         indexString = "\(weekday) \(Int(index/6) + 1)限"
         
         return indexString
+    }
+    
+    
+    //キーボードの完了ボタンが押された時のイベント
+    func doneActionButton() {
+        self.view.endEditing(true)
     }
 }

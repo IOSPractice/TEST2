@@ -14,9 +14,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
     @IBOutlet weak var collectionView: UICollectionView!
     
     var cells: [MyCollectionViewCell] = []//cellの外部取得用
-    var cellText: [String] = []
     var isMovable: Bool = false//セルタップ時に画面遷移可能かどうか
-    var editButton: UIBarButtonItem!
+    var editButton: UIBarButtonItem!//保存、完了ボタンの追加
     
     override func viewDidLoad() {
         //コレクションのデータソース、デリゲートの設定
@@ -25,21 +24,10 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         editButton = UIBarButtonItem(title: "編集", style: .Plain, target: self, action: #selector(TimeTable.editBtnAction(_:)))
         self.navigationItem.rightBarButtonItems = [editButton]
-        
-//        print("画面を読み込みました")
-//        let realm = try! Realm()
-//        let objects = realm.objects(ClassObject)
-//        if objects.isEmpty {
-//            print("配列は空でsうr")
-//        }
-//        for object in objects {
-//            print(object.classNum)
-//            print(object.classNum)
-//            print(object.index)
-//        }
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         self.collectionView.reloadData()
     }
     
@@ -49,8 +37,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
         
         if !isMovable {
             for cell in cells {
-                cell.className.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
-                cell.classNum.backgroundColor = UIColor.whiteColor()
+                cell.ClassName.backgroundColor =  UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0)
+                cell.ClassNum.backgroundColor = UIColor.whiteColor()
                 editButton.title = "完了"
                 
             }
@@ -58,12 +46,11 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
             //collectionView.reloadData()
         } else {
             for cell in cells {
-                cell.className.backgroundColor = UIColor.whiteColor()
-                cell.classNum.backgroundColor = UIColor.lightGrayColor()
+                cell.ClassName.backgroundColor = UIColor.whiteColor()
+                cell.ClassNum.backgroundColor = UIColor.lightGrayColor()
                 editButton.title = "編集"
             }
             isMovable = false
-            //collectionView.reloadData()
         }
     }
 
@@ -78,18 +65,15 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! MyCollectionViewCell
         
-        print(indexPath.row)
         cell.layer.borderWidth = 0.5
         let realm = try! Realm()
         let cellData = realm.objects(ClassObject).filter("index == %@", indexPath.row)
 
         //データがなければ空列を入れる
-        cell.className.text = cellData.isEmpty ? "" : cellData.first?.classNam
-        cell.classNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
+        cell.ClassName.text = cellData.isEmpty ? "" : cellData.first?.classNam
+        cell.ClassNum.text = cellData.isEmpty ? "" : cellData.first?.classNum
+    
         cells.append(cell)
-        
-        print("class numbr pos is\(cell.classNum.layer.position)")
-        print("class name pos is \(cell.className.layer.position)")
         
         return cell
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g16-Z8-QOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g16-Z8-QOa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,126 +15,83 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7b-Ic-tmp">
-                                <rect key="frame" x="0.0" y="175" width="600" height="90"/>
-                                <color key="backgroundColor" red="0.80593057313769756" green="1" blue="0.18668961552376606" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="Qcy-jS-56Q"/>
-                                    <constraint firstAttribute="width" constant="600" id="h0E-3c-ixA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="3" height="0.0"/>
-                                <state key="normal" title="時間割">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="0th-94-io6" kind="show" id="XQ2-hW-h48"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdh-S6-1p1">
-                                <rect key="frame" x="0.0" y="273" width="600" height="90"/>
-                                <color key="backgroundColor" red="0.37213237334308569" green="1" blue="0.84074139435549056" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="c64-vG-EDc"/>
-                                    <constraint firstAttribute="height" constant="90" id="eog-AG-nXr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="学内地図"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="dr6-7D-Q5A" kind="show" id="iq9-gK-MxM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjd-ag-irx">
-                                <rect key="frame" x="0.0" y="371" width="600" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.74564580313323003" blue="0.97042780620992908" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="AFY-lJ-vel"/>
-                                    <constraint firstAttribute="height" constant="90" id="zvv-JX-lP4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="ユニパ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="e0b-6R-9jr" kind="show" id="dOh-Hz-wF0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtB-mG-DR1">
-                                <rect key="frame" x="0.0" y="469" width="600" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.60987676531642199" blue="0.60640003008608834" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="0jl-zF-UNF"/>
-                                    <constraint firstAttribute="width" constant="600" id="FbX-aC-FUj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="課題管理"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="8RO-6f-6Kc" kind="show" id="DiZ-ns-UPS"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-Kn-7zu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-4P-DKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                        <color key="backgroundColor" red="0.39554870336153314" green="1" blue="0.62588575453346018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="時間割">
+                                            <color key="titleColor" red="0.00028275427670000001" green="0.0001660975677" blue="0.00031565656570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0th-94-io6" kind="show" id="rKU-LS-eip"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-md-Bev">
+                                        <rect key="frame" x="0.0" y="107" width="600" height="108"/>
+                                        <color key="backgroundColor" red="0.29237523143326705" green="0.88735590693730537" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="地図">
+                                            <color key="titleColor" red="0.00028275427670000001" green="0.0001660975677" blue="0.00031565656570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dr6-7D-Q5A" kind="show" id="8X7-QH-Ya4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-ym-kHb">
+                                        <rect key="frame" x="0.0" y="215" width="600" height="107"/>
+                                        <color key="backgroundColor" red="0.78038362321701649" green="0.69568319051801897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="ユニパ">
+                                            <color key="titleColor" red="0.00028275427670000001" green="0.0001660975677" blue="0.00031565656570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="e0b-6R-9jr" kind="show" id="IvH-NS-g29"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-b0-7w3">
+                                        <rect key="frame" x="0.0" y="322" width="600" height="108"/>
+                                        <color key="backgroundColor" red="1" green="0.62598196551188912" blue="0.73110571080127329" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="課題管理">
+                                            <color key="titleColor" red="0.00028275427670000001" green="0.0001660975677" blue="0.00031565656570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="8RO-6f-6Kc" kind="show" id="tId-mv-HIN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8x-RC-7HY">
+                                        <rect key="frame" x="0.0" y="429" width="600" height="107"/>
+                                        <color key="backgroundColor" red="1" green="0.72334137360923179" blue="0.28611791088241112" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="バス時刻表">
+                                            <color key="titleColor" red="0.00028275427670000001" green="0.0001660975677" blue="0.00031565656570000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qlk-Z3-FIl" kind="show" id="ryZ-zh-r4O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fdh-S6-1p1" firstAttribute="top" secondItem="p7b-Ic-tmp" secondAttribute="bottom" id="0n4-1h-iPh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gtB-mG-DR1" secondAttribute="trailing" id="ADu-Zc-Qza"/>
-                            <constraint firstItem="gtB-mG-DR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P3r-F6-Ind"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p7b-Ic-tmp" secondAttribute="trailing" id="SzS-Fh-VGV"/>
-                            <constraint firstItem="fdh-S6-1p1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T3q-6d-1a7"/>
-                            <constraint firstItem="fdh-S6-1p1" firstAttribute="top" secondItem="p7b-Ic-tmp" secondAttribute="bottom" id="Y8u-gs-EXj"/>
-                            <constraint firstItem="Bjd-ag-irx" firstAttribute="top" secondItem="fdh-S6-1p1" secondAttribute="bottom" id="ZEX-FR-8Gf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fdh-S6-1p1" secondAttribute="trailing" id="fcX-Ld-fNc"/>
-                            <constraint firstItem="p7b-Ic-tmp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="id5-yi-mHx"/>
-                            <constraint firstItem="Bjd-ag-irx" firstAttribute="top" secondItem="fdh-S6-1p1" secondAttribute="bottom" id="oAa-bJ-qWw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bjd-ag-irx" secondAttribute="trailing" id="qaR-p3-wuP"/>
-                            <constraint firstItem="gtB-mG-DR1" firstAttribute="top" secondItem="Bjd-ag-irx" secondAttribute="bottom" id="sMm-eC-bTT"/>
-                            <constraint firstItem="Bjd-ag-irx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="w6J-8A-rml"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2VQ-Kn-7zu" secondAttribute="trailing" constant="-20" id="0Yz-VL-p9U"/>
+                            <constraint firstItem="2VQ-Kn-7zu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NfP-LO-pa4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2VQ-Kn-7zu" secondAttribute="bottom" id="WEB-1P-cZz"/>
+                            <constraint firstItem="2VQ-Kn-7zu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bbG-Y9-tlO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="便利アプリ" id="KtT-id-fZq"/>
-                    <connections>
-                        <outlet property="mapBtn" destination="fdh-S6-1p1" id="395-zo-JtQ"/>
-                        <outlet property="taskManagementBtn" destination="gtB-mG-DR1" id="eDO-0X-J32"/>
-                        <outlet property="timeTableBtn" destination="p7b-Ic-tmp" id="kwU-8R-SxB"/>
-                        <outlet property="yunipaBtn" destination="Bjd-ag-irx" id="daR-QK-yTc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="997"/>
+            <point key="canvasLocation" x="792" y="997"/>
         </scene>
         <!--TimeTable-->
         <scene sceneID="nE1-eK-nws">
@@ -144,7 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QV-QI-3VR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.5" y="891.99999999999989"/>
+            <point key="canvasLocation" x="1080" y="799"/>
         </scene>
         <!--Map-->
         <scene sceneID="PTi-39-dTZ">
@@ -154,7 +111,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVc-AF-LxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.5" y="982.99999999999989"/>
+            <point key="canvasLocation" x="1079" y="889"/>
         </scene>
         <!--WebView-->
         <scene sceneID="Eva-Cc-BMf">
@@ -164,7 +121,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAc-cg-Fg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.5" y="1084"/>
+            <point key="canvasLocation" x="1079" y="991"/>
         </scene>
         <!--Task-->
         <scene sceneID="UAx-da-3ch">
@@ -174,16 +131,28 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ah7-eI-fYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.5" y="1169.9999999999998"/>
+            <point key="canvasLocation" x="1079.5" y="1070"/>
+        </scene>
+        <!--Bustime-->
+        <scene sceneID="oij-JQ-pAk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Bustime" storyboardName="Bustime" referencedIdentifier="Bustime" id="qlk-Z3-FIl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3i-oX-nJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083.5" y="1159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8OB-Rz-5qm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g16-Z8-QOa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9sS-FY-PA9">
+                    <navigationBar key="navigationBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9sS-FY-PA9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.32352702594518745" blue="0.063097040950721439" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.29024621212121215" green="0.13262242657953668" blue="0.093222138752653949" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
