@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Task-->
+        <!--Todo List-->
         <scene sceneID="FZt-CP-vQm">
             <objects>
-                <viewController storyboardIdentifier="Task" id="Ntp-Tq-xlW" customClass="Task" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Task" id="Ntp-Tq-xlW" customClass="TodoListViewController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wpj-tB-9xc"/>
                         <viewControllerLayoutGuide type="bottom" id="LJX-pK-PfO"/>
@@ -17,18 +18,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="テスト" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipj-kq-x4t">
-                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Txt-3k-vX2">
+                                <rect key="frame" x="4" y="20" width="592" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoListItem" id="ayp-Ud-nNW" customClass="TodoListItemTableViewCell" customModule="実習" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="592" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ayp-Ud-nNW" id="1Zn-mc-pcU">
+                                            <rect key="frame" x="0.0" y="0.0" width="592" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Foj-2q-62Y" kind="show" identifier="edit" id="x66-OG-jsd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ntp-Tq-xlW" id="9KX-5J-Vo9"/>
+                                    <outlet property="delegate" destination="Ntp-Tq-xlW" id="YKa-xu-KwN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Txt-3k-vX2" firstAttribute="top" secondItem="wpj-tB-9xc" secondAttribute="bottom" id="Cjf-DW-z9s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Txt-3k-vX2" secondAttribute="trailing" constant="-16" id="bpD-IK-6zA"/>
+                            <constraint firstItem="Txt-3k-vX2" firstAttribute="leading" secondItem="GYZ-Va-Qx3" secondAttribute="leadingMargin" constant="-16" id="m3D-2F-sgg"/>
+                            <constraint firstItem="LJX-pK-PfO" firstAttribute="top" secondItem="Txt-3k-vX2" secondAttribute="bottom" id="oe1-6Z-RFE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Todo List" id="DO2-HT-VLm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="82q-DL-J9U">
+                            <connections>
+                                <segue destination="Foj-2q-62Y" kind="show" id="zit-Dr-8lk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Txt-3k-vX2" id="GoQ-ZX-xUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2OR-jm-CZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="114"/>
+        </scene>
+        <!--Todo Item-->
+        <scene sceneID="RCJ-Qh-piF">
+            <objects>
+                <viewController id="Foj-2q-62Y" customClass="TodoItemViewController" customModule="実習" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Upy-hK-dA7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vf7-c2-9fX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="edG-o9-3Uu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-7S-ai2">
+                                <rect key="frame" x="15" y="191" width="570" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="-5" id="Rei-MR-xXd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M4Q-7S-ai2" secondAttribute="trailing" constant="-5" id="Vqa-LO-6bN"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Todo Item" id="YTs-9m-v3J">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fyx-oZ-Cnk">
+                            <connections>
+                                <action selector="cancel:" destination="Foj-2q-62Y" id="wrq-Ys-L4E"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bdN-77-bFk">
+                            <connections>
+                                <action selector="save:" destination="Foj-2q-62Y" id="Y8I-FY-8sY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="todoField" destination="M4Q-7S-ai2" id="EhU-3t-R3X"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2OR-jm-CZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pm-rE-SNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JMx-9T-IUH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dcd-Js-WYi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyx-kT-9LD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ntp-Tq-xlW" kind="relationship" relationship="rootViewController" id="AYH-0F-0ty"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TA3-55-U5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489" y="114"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="x66-OG-jsd"/>
+    </inferredMetricsTieBreakers>
 </document>
