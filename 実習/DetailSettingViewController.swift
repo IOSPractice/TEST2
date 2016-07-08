@@ -22,9 +22,29 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
     }
     
+    
+    //セクションごとのセル数の設定
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stationTitles.count
+        if section == 0 {
+            return stationTitles.count
+        } else if section == 1 {
+            return 1
+        }
+        
+        return 0
     }
+    
+    //セクション数の設定
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    
+    //セクションの高さの設定
+    func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellDetail")
@@ -58,6 +78,7 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
             }
             
         case 1:
+            cell?.textLabel?.text = "バス通知の設定"
             notifSwch = UISwitch()
             notifSwch.addTarget(self, action: #selector(DetailSettingViewController.notificationSwitching(_:)), forControlEvents: .ValueChanged)
             //TODO: notifSwch.on = true
@@ -66,7 +87,6 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
         default:
             break
         }
-        
         
         return cell!
     }

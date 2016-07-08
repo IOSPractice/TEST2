@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
         MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("TodoApp.sqlite")
         return true
     }
@@ -45,6 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MagicalRecord.cleanUp()
     }
 
-
+    //初回起動判定関数
+    func isFirstRun() -> Bool{
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if(defaults.boolForKey("firstRun")) {
+            return false
+        }
+        
+        return true
+    }
 }
 

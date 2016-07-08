@@ -21,6 +21,7 @@
 		AE5A639F1CE58373003C5990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */; };
 		AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */; };
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
+		AEBD405A1D2F631A00D60F20 /* BusDestinaionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */; };
 		AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC584391D09C54F00881360 /* TimeTableEditController.swift */; };
 		AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */; };
 		BE7F37801D2977DB0052AB93 /* MAP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F377F1D2977DB0052AB93 /* MAP2.swift */; };
@@ -73,6 +74,7 @@
 		AE5A63A01CE58373003C5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
+		AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDestinaionData.swift; sourceTree = "<group>"; };
 		AEC584391D09C54F00881360 /* TimeTableEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEditController.swift; sourceTree = "<group>"; };
 		AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSettingViewController.swift; sourceTree = "<group>"; };
 		BE7F377F1D2977DB0052AB93 /* MAP2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAP2.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
 				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AEC584391D09C54F00881360 /* TimeTableEditController.swift */,
+				AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */,
 				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
 			);
 			name = "時間割";
@@ -408,6 +411,7 @@
 				CA10FD781CFBC02F00F6C026 /* TodoListViewController.swift in Sources */,
 				BEDFBE1A1CF2BE170060B3FA /* Map.swift in Sources */,
 				AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */,
+				AEBD405A1D2F631A00D60F20 /* BusDestinaionData.swift in Sources */,
 				AE15C4E31CF53DF60086CD3E /* MyLabel.swift in Sources */,
 				AE4704C41D2642AB00555D99 /* PopUpPickerView.swift in Sources */,
 				CA38ABFA1D2E877100962B81 /* TodoItemViewController.swift in Sources */,
