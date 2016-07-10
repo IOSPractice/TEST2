@@ -99,11 +99,17 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
         
         if let dest = destStations.first {//取り出した値がnilでなければ値を更新する
             if sender == takasakaSwch {
-                dest.takasaka = sender.on
+                try! realm.write() {
+                    dest.takasaka = sender.on
+                }
             } else if sender == kitasakadoSwch {
-                dest.kitasakado = sender.on
+                try! realm.write() {
+                    dest.kitasakado = sender.on
+                }
             } else if sender == kumagayaSwch {
-                dest.kumagaya = sender.on
+                try! realm.write() {
+                    dest.kumagaya = sender.on
+                }
             }
         }
     }

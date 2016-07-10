@@ -56,20 +56,16 @@ class BustimeTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
         if destStation.takasaka && station == "高坂" {
             cell.textLabel?.text = "\(formatFromNSDate(busDates[indexPath.row].0))"
             cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
+            cell.backgroundColor = UIColor(red: 43/255, green: 165/255, blue: 216/255, alpha: 0.5)
         } else if destStation.kitasakado && station == "北坂戸" {
             cell.textLabel?.text = "\(formatFromNSDate(busDates[indexPath.row].0))"
             cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
+            cell.backgroundColor = UIColor(red: 164/255, green: 199/255, blue: 114/255, alpha: 0.5)
         } else if destStation.kumagaya && station == "熊谷" {
             cell.textLabel?.text = "\(formatFromNSDate(busDates[indexPath.row].0))"
             cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
-        }
-        
-        if station == "高坂" {
-            cell.backgroundColor = UIColor(red: 43/255, green: 165/255, blue: 216/255, alpha: 0.5)
-        } else if station == "北坂戸" {
-            cell.backgroundColor = UIColor(red: 164/255, green: 199/255, blue: 114/255, alpha: 0.5)
-        } else if station == "熊谷" {
             cell.backgroundColor = UIColor(red: 218/255, green: 165/255, blue: 184/255, alpha: 0.5)
+        } else {
         }
         
         return cell
