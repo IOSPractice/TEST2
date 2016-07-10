@@ -9,6 +9,7 @@
 import UIKit
 import MagicalRecord
 import CoreData
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        /*初回起動の動作
+          バスの表示駅一覧のデータをすべて表示可能な設定にしておく*/
+        if(isFirstRun()) {
+            let realm = try! Realm()
+            let destSations = BusDestinationData()//登録したい駅情報
+            
+            //データの書き込み
+            try! realm.write() {
+                realm.add(destSations)
+            }
+        }
         
         MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("TodoApp.sqlite")
         return true

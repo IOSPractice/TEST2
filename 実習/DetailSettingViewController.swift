@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class DetailSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var detailTableView: UITableView!
@@ -20,6 +21,7 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     var notifSwch: UISwitch!
     
     override func viewDidLoad() {
+        
     }
     
     
@@ -92,7 +94,18 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func switchAction(sender: UISwitch) {
+        let realm = try! Realm()
+        let destStations = realm.objects(BusDestinationData)
         
+        if let dest = destStations.first {//取り出した値がnilでなければ値を更新する
+            if sender == takasakaSwch {
+                dest.takasaka = sender.on
+            } else if sender == kitasakadoSwch {
+                dest.kitasakado = sender.on
+            } else if sender == kumagayaSwch {
+                dest.kumagaya = sender.on
+            }
+        }
     }
     
     func notificationSwitching(sender: UISwitch) {
