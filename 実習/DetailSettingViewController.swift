@@ -54,23 +54,25 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
         switch indexPath.section {
         case 0:
             cell?.textLabel?.text = "\(stationTitles[indexPath.row])"
+            let realm = try! Realm()
+            let destStation = realm.objects(BusDestinationData).first!
             
             switch indexPath.row {
             case 0:
                 takasakaSwch = UISwitch()
-                //TODO:takasakaSwch.on = true
+                takasakaSwch.on = destStation.takasaka
                 takasakaSwch.addTarget(self, action: #selector(DetailSettingViewController.switchAction(_:)), forControlEvents: .ValueChanged)
                 cell?.accessoryView = UIView(frame: takasakaSwch.frame)
                 cell?.accessoryView?.addSubview(takasakaSwch)
             case 1:
                 kitasakadoSwch = UISwitch()
-                //TODO:kitasakadoSwch.on = true
+                kitasakadoSwch.on = destStation.kitasakado
                 kitasakadoSwch.addTarget(self, action: #selector(DetailSettingViewController.switchAction(_:)), forControlEvents: .ValueChanged)
                 cell?.accessoryView = UIView(frame: kitasakadoSwch.frame)
                 cell?.accessoryView?.addSubview(kitasakadoSwch)
             case 2:
                 kumagayaSwch = UISwitch()
-                //TODO:kumagayaSwch.on = true
+                kumagayaSwch.on = destStation.kumagaya
                 kumagayaSwch.addTarget(self, action: #selector(DetailSettingViewController.switchAction(_:)), forControlEvents: .ValueChanged)
                 cell?.accessoryView = UIView(frame: kumagayaSwch.frame)
                 cell?.accessoryView?.addSubview(kumagayaSwch)

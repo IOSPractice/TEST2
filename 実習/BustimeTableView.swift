@@ -46,6 +46,7 @@ class BustimeTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
         return 280
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
         let station = busDates[indexPath.row].1
@@ -66,6 +67,7 @@ class BustimeTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
             cell.detailTextLabel?.text = "\(busDates[indexPath.row].1)駅行き"
             cell.backgroundColor = UIColor(red: 218/255, green: 165/255, blue: 184/255, alpha: 0.5)
         } else {
+            cell.hidden = true
         }
         
         return cell
