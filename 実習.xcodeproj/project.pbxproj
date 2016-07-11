@@ -147,6 +147,7 @@
 				AE4704C31D2642AB00555D99 /* PopUpPickerView.swift */,
 				AE50B76C1D1E72C500CD1EA3 /* BustimeTableView.swift */,
 				AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */,
+				AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */,
 				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
 				CAB7EDD31D20E3AF008EA339 /* bustime.plist */,
 			);
@@ -161,7 +162,6 @@
 				AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */,
 				AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */,
 				AEC584391D09C54F00881360 /* TimeTableEditController.swift */,
-				AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */,
 				AE001BB51D0BEF2200F14478 /* ClassObject.swift */,
 			);
 			name = "時間割";

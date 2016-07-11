@@ -99,9 +99,7 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
         
         
-        tableView.initialize(busDates)
-        tableView.reloadData()
-    
+        tableView.initialize(busDates)    
         
         //UIDatePickerの設定
         datePicker = PopUpPickerView()
@@ -126,6 +124,12 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         if ((viewController?.contains(self)) != nil) {
             datePicker.hidePicker()
         }
+    }
+    
+    //詳細設定画面から戻ってきた時に行き先駅の再読み込み
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
     
     

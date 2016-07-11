@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class BusDestinationData: Object {
-    var takasaka: Bool = true
-    var kitasakado: Bool = true
-    var kumagaya: Bool = true
+    dynamic var takasaka: Bool = true
+    dynamic var kitasakado: Bool = true
+    dynamic var kumagaya: Bool = true
 }
