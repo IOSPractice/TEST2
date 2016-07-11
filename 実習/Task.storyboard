@@ -76,9 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-7S-ai2">
-                                <rect key="frame" x="15" y="191" width="570" height="30"/>
+                                <rect key="frame" x="4" y="191" width="592" height="30"/>
                                 <color key="backgroundColor" red="0.88330078125" green="0.88330078125" blue="0.88330078125" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -88,15 +89,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qu-lf-r4e">
+                                <rect key="frame" x="35" y="353" width="530" height="30"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期日を入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-u0-xPJ">
+                                <rect key="frame" x="50" y="299" width="500" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="top" secondItem="bR6-ye-17J" secondAttribute="bottom" constant="50" id="9aC-2D-byW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bR6-ye-17J" secondAttribute="trailing" constant="10" id="F8R-eR-chd"/>
+                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="-16" id="IC1-K8-Xqn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9qu-lf-r4e" secondAttribute="trailing" constant="15" id="IJ3-Mv-8HL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M4Q-7S-ai2" secondAttribute="trailing" constant="-16" id="LPm-eN-dMO"/>
                             <constraint firstItem="bR6-ye-17J" firstAttribute="top" secondItem="Upy-hK-dA7" secondAttribute="bottom" constant="56" id="LzD-pW-qGl"/>
-                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="-5" id="Rei-MR-xXd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="M4Q-7S-ai2" secondAttribute="trailing" constant="-5" id="Vqa-LO-6bN"/>
+                            <constraint firstItem="vf7-c2-9fX" firstAttribute="top" secondItem="9qu-lf-r4e" secondAttribute="bottom" constant="217" id="Nli-BD-N3O"/>
+                            <constraint firstItem="9qu-lf-r4e" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="15" id="Nye-n1-AHH"/>
+                            <constraint firstItem="9qu-lf-r4e" firstAttribute="top" secondItem="7lE-u0-xPJ" secondAttribute="bottom" constant="33" id="chb-7B-w8p"/>
+                            <constraint firstItem="7lE-u0-xPJ" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="30" id="fUE-JP-pdC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7lE-u0-xPJ" secondAttribute="trailing" constant="30" id="faw-sI-G8d"/>
                             <constraint firstItem="bR6-ye-17J" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="10" id="fsU-wg-S5e"/>
+                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="top" secondItem="bR6-ye-17J" secondAttribute="bottom" constant="50" id="sIV-Gc-fph"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Todo Item" id="YTs-9m-v3J">

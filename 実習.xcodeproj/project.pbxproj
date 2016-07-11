@@ -276,7 +276,7 @@
 				TargetAttributes = {
 					AE5A63901CE58373003C5990 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = ATM925VG3G;
+						DevelopmentTeam = G7RA26TA6F;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -536,7 +536,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "実習/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = t.company;
+				PRODUCT_BUNDLE_IDENTIFIER = a.company;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_OBJC_BRIDGING_HEADER)";
@@ -552,7 +552,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "実習/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = t.company;
+				PRODUCT_BUNDLE_IDENTIFIER = a.company;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_OBJC_BRIDGING_HEADER)";
