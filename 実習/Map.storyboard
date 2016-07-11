@@ -49,7 +49,7 @@
                                 <rect key="frame" x="242" y="50" width="62" height="30"/>
                                 <state key="normal" title="MAPGPS"/>
                                 <connections>
-                                    <segue destination="Siq-l2-k1a" kind="modal" animates="NO" id="4fU-tW-YuO"/>
+                                    <segue destination="Siq-l2-k1a" kind="push" animates="NO" id="4fU-tW-YuO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___号館＿階" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwD-wX-piC">
@@ -62,7 +62,7 @@
                                 <rect key="frame" x="26" y="10" width="30" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="jtP-7R-IRq" kind="modal" id="EXG-VL-AsL"/>
+                                    <segue destination="jtP-7R-IRq" kind="push" id="EXG-VL-AsL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,6 +85,7 @@
                             <constraint firstItem="pzS-z5-w1W" firstAttribute="top" secondItem="vtR-l1-tJb" secondAttribute="bottom" constant="50" id="zpr-An-UAf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jba-dG-30d"/>
                     <connections>
                         <outlet property="ImageView" destination="wrH-SH-sdX" id="ffj-iO-eb7"/>
                         <outlet property="Label" destination="pwD-wX-piC" id="SBQ-Q6-CwG"/>
@@ -98,7 +99,9 @@
         <!--Main-->
         <scene sceneID="15f-pj-Wnl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="jtP-7R-IRq" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="jtP-7R-IRq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gbE-FL-zrq"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPQ-de-ndb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371.5" y="-344"/>
@@ -118,28 +121,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-bl-6s5">
                                 <rect key="frame" x="16" y="60" width="288" height="508"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-mX-hrb">
-                                <rect key="frame" x="16" y="18" width="60" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="GlV-pP-PIv"/>
-                                    <constraint firstAttribute="height" constant="40" id="SRW-Vd-6Kd"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="wMs-St-RGf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="Nsh-Vf-lXb" kind="modal" id="UFi-Rr-20Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y6t-mX-hrb" firstAttribute="leading" secondItem="UrZ-Mg-U04" secondAttribute="leadingMargin" id="3Og-NV-cJ2"/>
                             <constraint firstItem="iH5-bx-R6Z" firstAttribute="top" secondItem="2wb-bl-6s5" secondAttribute="bottom" id="GvH-ks-hYZ"/>
                             <constraint firstItem="2wb-bl-6s5" firstAttribute="top" secondItem="lWW-et-83m" secondAttribute="bottom" constant="40" id="ca1-9a-M1g"/>
                             <constraint firstItem="2wb-bl-6s5" firstAttribute="leading" secondItem="UrZ-Mg-U04" secondAttribute="leadingMargin" id="eT2-mW-Mrn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2wb-bl-6s5" secondAttribute="trailing" id="k7t-3x-Emh"/>
-                            <constraint firstItem="y6t-mX-hrb" firstAttribute="top" secondItem="UrZ-Mg-U04" secondAttribute="topMargin" constant="18" id="rr0-Kn-mPm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RQh-GZ-47J"/>
