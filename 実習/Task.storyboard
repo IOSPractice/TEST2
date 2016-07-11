@@ -75,16 +75,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-7S-ai2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4Q-7S-ai2">
                                 <rect key="frame" x="15" y="191" width="570" height="30"/>
+                                <color key="backgroundColor" red="0.88330078125" green="0.88330078125" blue="0.88330078125" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモを入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-ye-17J">
+                                <rect key="frame" x="30" y="120" width="540" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="M4Q-7S-ai2" firstAttribute="top" secondItem="bR6-ye-17J" secondAttribute="bottom" constant="50" id="9aC-2D-byW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bR6-ye-17J" secondAttribute="trailing" constant="10" id="F8R-eR-chd"/>
+                            <constraint firstItem="bR6-ye-17J" firstAttribute="top" secondItem="Upy-hK-dA7" secondAttribute="bottom" constant="56" id="LzD-pW-qGl"/>
                             <constraint firstItem="M4Q-7S-ai2" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="-5" id="Rei-MR-xXd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M4Q-7S-ai2" secondAttribute="trailing" constant="-5" id="Vqa-LO-6bN"/>
+                            <constraint firstItem="bR6-ye-17J" firstAttribute="leading" secondItem="edG-o9-3Uu" secondAttribute="leadingMargin" constant="10" id="fsU-wg-S5e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Todo Item" id="YTs-9m-v3J">
