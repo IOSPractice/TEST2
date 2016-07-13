@@ -110,6 +110,8 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         } else {
             self.view.addSubview(datePicker)
         }
+        
+        scrollToNowDate()
     }
 
     override func didReceiveMemoryWarning() {
