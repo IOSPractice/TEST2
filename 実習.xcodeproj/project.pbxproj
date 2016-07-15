@@ -21,6 +21,7 @@
 		AE5A639F1CE58373003C5990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A639D1CE58373003C5990 /* LaunchScreen.storyboard */; };
 		AE5A63A71CE585D7003C5990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */; };
 		AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */; };
+		AEA02A371D38C65E00D5BE96 /* MyLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA02A361D38C65E00D5BE96 /* MyLocalNotification.swift */; };
 		AEBD405A1D2F631A00D60F20 /* BusDestinaionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */; };
 		AEC5843A1D09C54F00881360 /* TimeTableEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC584391D09C54F00881360 /* TimeTableEditController.swift */; };
 		AEDF05921D2792F300C00022 /* DetailSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */; };
@@ -74,6 +75,7 @@
 		AE5A63A01CE58373003C5990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE5A63A61CE585D7003C5990 /* TimeTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		AE8DA6F21CE5A7CB004D2EC8 /* TimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
+		AEA02A361D38C65E00D5BE96 /* MyLocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocalNotification.swift; sourceTree = "<group>"; };
 		AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDestinaionData.swift; sourceTree = "<group>"; };
 		AEC584391D09C54F00881360 /* TimeTableEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableEditController.swift; sourceTree = "<group>"; };
 		AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSettingViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				AE4704C31D2642AB00555D99 /* PopUpPickerView.swift */,
 				AE50B76C1D1E72C500CD1EA3 /* BustimeTableView.swift */,
 				AEDF05911D2792F300C00022 /* DetailSettingViewController.swift */,
+				AEA02A361D38C65E00D5BE96 /* MyLocalNotification.swift */,
 				AEBD40591D2F631A00D60F20 /* BusDestinaionData.swift */,
 				AE24CDDA1D179A9300D706FC /* Bustime.swift */,
 				CAB7EDD31D20E3AF008EA339 /* bustime.plist */,
@@ -400,6 +403,7 @@
 			files = (
 				BE7F37801D2977DB0052AB93 /* MAP2.swift in Sources */,
 				AE5A63971CE58373003C5990 /* Main.swift in Sources */,
+				AEA02A371D38C65E00D5BE96 /* MyLocalNotification.swift in Sources */,
 				AE001BB61D0BEF2200F14478 /* ClassObject.swift in Sources */,
 				AE1799821CF2E88100D1CE16 /* MyCollectionViewCell.swift in Sources */,
 				AE8DA6F31CE5A7CB004D2EC8 /* TimeTable.swift in Sources */,
