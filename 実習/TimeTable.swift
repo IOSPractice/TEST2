@@ -88,6 +88,8 @@ class TimeTable: UIViewController, UICollectionViewDataSource, UICollectionViewD
             self.navigationController?.pushViewController(timeTableEditController, animated: true)
         }
         
+        
+        print("cell index is \(indexPath.row)")
     }
     
     //セルのサイズ指定

@@ -19,21 +19,20 @@ class MyLocalNotification: NSObject {
         
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
-        
-        //バスの発着時刻を返す
-        setNotificationBustimes()
     }
     
     
     //今日の授業データから最後の授業終了時刻以降のバスの時刻を三つほど返す
-    private func setNotificationBustimes() {
+    func setNotificationBustimes() {
         let busItems = getBustimes()//バスの時刻表の取得
         let lastDate = getLastClassDate()//その日の最後の授業の終了時刻を取得
         var busCount = 0//バスの通知数をカウント
         
         for item in busItems {
+
             if lastDate?.compare(item.0) == NSComparisonResult.OrderedAscending && busCount < 3 {
                 self.schedule(item)
+                print("\(formatFromNSDate(item.0))")
                 busCount += 1
             } else if busCount >= 3 {
                 break
@@ -51,6 +50,7 @@ class MyLocalNotification: NSObject {
         notification.alertBody = "\(busData.1)駅行き\(formatFromNSDate(busData.0))発)"
         notification.alertAction = "アプリを起動"
         notification.soundName = UILocalNotificationDefaultSoundName
+
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }
@@ -71,9 +71,9 @@ class MyLocalNotification: NSObject {
     
     
     //授業データから本日の最後の授業を取得し、終了時刻を返す
-    private func getLastClassDate() -> NSDate? {
+    private func getLastClassDate() -> NSDate! {
         var retDate: NSDate!
-        let weekDay = getWeekDay() - 1//今日の曜日を取得
+        let weekDay = getWeekDay() - 2//今日の曜日を取得し、変換
         let realm = try! Realm()
         var todayClasses:[ClassObject] = []
         let classes = Array(realm.objects(ClassObject))
@@ -84,16 +84,24 @@ class MyLocalNotification: NSObject {
         
         //今日の授業を授業データの中から取り出す。
         for item in classes {
-            if item.index == ((weekDay % 6) + (weekDay / 6)) {
-                todayClasses.append(item)
+            for var i in 0 ... 5 {
+                if item.index == ((weekDay % 6) + i*6) {
+                    todayClasses.append(item)
+                }
             }
         }
         
-        //取り出したデータの最後を取得
-        let todayLastClass = todayClasses.last
-        //取り出したデータのindexから最後の時間を調べる
-        let index = (todayLastClass?.index)!/6
-        retDate = setHourAndMinuteFromString(dateString[index])
+        if !todayClasses.isEmpty {
+            //取り出したデータの最後を取得
+            let todayLastClass = todayClasses.last!
+            print("最後の授業は\(todayLastClass.classNam)")
+            //取り出したデータのindexから最後の時間を調べる
+            let index = Int(todayLastClass.index / 6)
+            retDate = setHourAndMinuteFromString(dateString[index])
+            
+        } else {
+            return nil
+        }
         
         return retDate
     }

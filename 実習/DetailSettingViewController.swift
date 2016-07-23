@@ -117,6 +117,13 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func notificationSwitching(sender: UISwitch) {
-        
+
+        print("Switching ...")
+        if sender.on == true {
+            //バスの通知を登録
+            MyLocalNotification().setNotificationBustimes()
+        } else {
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
     }
 }
