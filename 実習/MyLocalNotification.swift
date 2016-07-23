@@ -11,6 +11,7 @@ import UIKit
 import RealmSwift
 
 class MyLocalNotification: NSObject {
+    let dateString: [String] = ["11:00", "12:40", "15:00", "16:40", "18:20", "20:00"]//各授業の終了時刻
     var notification: UILocalNotification!
     
     override init() {
@@ -18,10 +19,45 @@ class MyLocalNotification: NSObject {
         
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
-        notification = UILocalNotification()
+        
+        //バスの発着時刻を返す
+        setNotificationBustimes()
     }
     
-    func getWeekDay() -> Int {
+    
+    //今日の授業データから最後の授業終了時刻以降のバスの時刻を三つほど返す
+    private func setNotificationBustimes() {
+        let busItems = getBustimes()//バスの時刻表の取得
+        let lastDate = getLastClassDate()//その日の最後の授業の終了時刻を取得
+        var busCount = 0//バスの通知数をカウント
+        
+        for item in busItems {
+            if lastDate?.compare(item.0) == NSComparisonResult.OrderedAscending && busCount < 3 {
+                self.schedule(item)
+                busCount += 1
+            } else if busCount >= 3 {
+                break
+            }
+        }
+    }
+    
+    
+    //引数のバスデータの10分前に通知が発せられるようにセット
+    private func schedule(busData: (NSDate, String)) {
+        let notification = UILocalNotification()
+        
+        notification.fireDate = busData.0.before(.Minute, duration: 10)
+        notification.timeZone = NSTimeZone(name: "GMT")
+        notification.alertBody = "\(busData.1)駅行き\(formatFromNSDate(busData.0))発)"
+        notification.alertAction = "アプリを起動"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+    }
+    
+    
+    //今日の曜日を取得する
+    private func getWeekDay() -> Int {
         let date: NSDate = NSDate()
         let cal: NSCalendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         let comp: NSDateComponents = cal.components(
@@ -31,26 +67,39 @@ class MyLocalNotification: NSObject {
         
         return comp.weekday
     }
-    
-    func setNotificationBustimes() {
-        let busItems = getBustimes()//バスの時刻表の取得
-        
-    }
+
     
     
     //授業データから本日の最後の授業を取得し、終了時刻を返す
-    func getLastClassDate() -> NSDate {
+    private func getLastClassDate() -> NSDate? {
         var retDate: NSDate!
-        let weekDay = getWeekDay()//今日の曜日を取得
+        let weekDay = getWeekDay() - 1//今日の曜日を取得
         let realm = try! Realm()
+        var todayClasses:[ClassObject] = []
+        let classes = Array(realm.objects(ClassObject))
         
-        //今日の授業データを取得
-        let todayClasses = realm.objects(ClassObject).filter("index % 6 == %d", weekDay)
-    
+        if weekDay >= 6 {//日曜日はサポートしません
+            return nil
+        }
+        
+        //今日の授業を授業データの中から取り出す。
+        for item in classes {
+            if item.index == ((weekDay % 6) + (weekDay / 6)) {
+                todayClasses.append(item)
+            }
+        }
+        
+        //取り出したデータの最後を取得
+        let todayLastClass = todayClasses.last
+        //取り出したデータのindexから最後の時間を調べる
+        let index = (todayLastClass?.index)!/6
+        retDate = setHourAndMinuteFromString(dateString[index])
+        
         return retDate
     }
     
-    func getBustimes() -> [(NSDate, String)] {
+    
+    private func getBustimes() -> [(NSDate, String)] {
         //プロジェクト内のplistファイルを読み込む
         let path: String = NSBundle.mainBundle().pathForResource("bustime", ofType: "plist")!
         let plist: NSDictionary = NSDictionary(contentsOfFile: path)!
@@ -71,7 +120,7 @@ class MyLocalNotification: NSObject {
     }
     
     //NSArrayに格納されている文字列の時間をNSDate型に変換し、配列で返す
-    func pickUpDateFromNSArray(bustime: NSArray, station: String) -> [(NSDate, String)] {
+    private func pickUpDateFromNSArray(bustime: NSArray, station: String) -> [(NSDate, String)] {
         var bustimeDates: [(NSDate, String)] = []
         
         for item in bustime {
@@ -84,7 +133,7 @@ class MyLocalNotification: NSObject {
     
     
     //文字列の時間をNSDate型にセットする
-    func setHourAndMinuteFromString(stringDate: String) -> NSDate {
+    private func setHourAndMinuteFromString(stringDate: String) -> NSDate {
         var retDate: NSDate = NSDate()//現在時刻の取得
         
         //文字列時刻を":"で分割し、Int型に変換する
@@ -104,5 +153,12 @@ class MyLocalNotification: NSObject {
         return retDate
     }
 
-
+    func formatFromNSDate(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        formatter.timeZone = NSTimeZone(name: "GMT")
+        formatter.dateFormat = "HH:mm"
+        print("バス発車時刻\(date)")
+        return formatter.stringFromDate(date)
+    }
 }
