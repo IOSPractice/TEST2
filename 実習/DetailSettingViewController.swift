@@ -82,8 +82,10 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
             }
             
         case 1:
+            let busNotification = NSUserDefaults.standardUserDefaults()//バス通知のBool型データを取り出す用
             cell?.textLabel?.text = "バス通知の設定"
             notifSwch = UISwitch()
+            notifSwch.on = busNotification.boolForKey("busNotification")
             notifSwch.addTarget(self, action: #selector(DetailSettingViewController.notificationSwitching(_:)), forControlEvents: .ValueChanged)
             //TODO: notifSwch.on = true
             cell?.accessoryView = UIView(frame: notifSwch.frame)
@@ -116,14 +118,21 @@ class DetailSettingViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
+    
     func notificationSwitching(sender: UISwitch) {
 
-        print("Switching ...")
         if sender.on == true {
             //バスの通知を登録
-            MyLocalNotification().setNotificationBustimes()
+            let notification = MyLocalNotification()
+            notification.setNotificationBustimes()
+            
+            let busNotification = NSUserDefaults.standardUserDefaults()
+            busNotification.setBool(true, forKey: "busNotification")
+            
         } else {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
+            let busNotification = NSUserDefaults.standardUserDefaults()
+            busNotification.setBool(false, forKey: "busNotification")
         }
     }
 }

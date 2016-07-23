@@ -20,11 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        //アプリケーションに設定されているすべての通知設定をリセット、登録する
-        let notification = MyLocalNotification()
-        notification.setNotificationBustimes()
-        print("App launch")
-        
         /*初回起動の動作
           バスの表示駅一覧のデータをすべて表示可能な設定にしておく*/
         if(isFirstRun()) {
@@ -35,6 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try! realm.write() {
                 realm.add(destSations)
             }
+            
+            //バス通知の設定
+            let busNnotification = NSUserDefaults.standardUserDefaults()
+            busNnotification.setBool(false, forKey: "busNotification")
+        }
+        
+        //アプリケーション起動時、バス通知の登録が許可されていれば登録する
+        let busNotification = NSUserDefaults.standardUserDefaults()
+        if busNotification.boolForKey("busNotification") {
+            let notification = MyLocalNotification()
+            notification.setNotificationBustimes()
         }
         
         MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("TodoApp.sqlite")
@@ -71,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(defaults.boolForKey("firstRun")) {
             return false
         }
+        defaults.setBool(false, forKey: "firstRun")
         
         return true
     }

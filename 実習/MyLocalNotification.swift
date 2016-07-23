@@ -32,7 +32,6 @@ class MyLocalNotification: NSObject {
 
             if lastDate?.compare(item.0) == NSComparisonResult.OrderedAscending && busCount < 3 {
                 self.schedule(item)
-                print("\(formatFromNSDate(item.0))")
                 busCount += 1
             } else if busCount >= 3 {
                 break
@@ -94,7 +93,6 @@ class MyLocalNotification: NSObject {
         if !todayClasses.isEmpty {
             //取り出したデータの最後を取得
             let todayLastClass = todayClasses.last!
-            print("最後の授業は\(todayLastClass.classNam)")
             //取り出したデータのindexから最後の時間を調べる
             let index = Int(todayLastClass.index / 6)
             retDate = setHourAndMinuteFromString(dateString[index])
@@ -166,7 +164,6 @@ class MyLocalNotification: NSObject {
         formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         formatter.timeZone = NSTimeZone(name: "GMT")
         formatter.dateFormat = "HH:mm"
-        print("バス発車時刻\(date)")
         return formatter.stringFromDate(date)
     }
 }

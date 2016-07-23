@@ -96,8 +96,6 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
 
         //ファイルからバスの時刻表データを取得する
         busDates = self.getBustimes()
-        busDates.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
-        
         
         tableView.initialize(busDates)    
         
@@ -266,6 +264,7 @@ class Bustime: UIViewController, UITableViewDataSource, UITableViewDelegate, Pop
         var dateItems = self.pickUpDateFromNSArray(takasaka, station: "高坂")
         dateItems += self.pickUpDateFromNSArray(kitasakado, station: "北坂戸")
         dateItems += self.pickUpDateFromNSArray(kumagaya, station: "熊谷")
+        dateItems.sortInPlace {$0.0.timeIntervalSince1970 < $1.0.timeIntervalSince1970}
         
         return dateItems
     }
