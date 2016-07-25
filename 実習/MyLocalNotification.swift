@@ -46,7 +46,7 @@ class MyLocalNotification: NSObject {
         
         notification.fireDate = busData.0.before(.Minute, duration: 10)
         notification.timeZone = NSTimeZone(name: "GMT")
-        notification.alertBody = "\(busData.1)駅行き\(formatFromNSDate(busData.0))発)"
+        notification.alertBody = "\(busData.1)駅行き\(formatFromNSDate(busData.0))発"
         notification.alertAction = "アプリを起動"
         notification.soundName = UILocalNotificationDefaultSoundName
 
